@@ -52,7 +52,7 @@ smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoServ
                 incremental:true
             },
             primaryChartLabel:"Taxi Parking",
-            secondaryChartLabel:"Unloading Bay"
+            secondaryChartLabel:"Maintainence Bay"
         },
         bertIndexFlag:true,
         elderlyGraphFlag:false,
