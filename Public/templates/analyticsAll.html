@@ -15,15 +15,15 @@
                 <div ng-include="'templates/includes/unLoadingBuses.html'" ng-controller="unloadingCtrl"></div>
 
                 <!--......... loading buses ...........-->
-                <div ng-include="'templates/includes/loadingOccupancyDetails.html'"
-                     ng-controller="loadingOccupancyCtrl"></div>
+                <!--<div ng-include="'templates/includes/loadingOccupancyDetails.html'"
+                     ng-controller="loadingOccupancyCtrl"></div>-->
 
             </div>
             <div class="rightSection">
                 <div class="busLanesMain" ng-controller="busLotCtrl">
                     <!--....... parking buses .........-->
                     <div class="mainSummary marginBtm">
-                        <div class="heading subNormal ">Bus Parking</div>
+                        <div class="heading subNormal ">Taxi Parking</div>
 
                         <div class="content midBlock">
                             <div class="midBlock largeTxt num female">
@@ -59,7 +59,7 @@
                                             <img src="images/busParking.png" class="_1" alt="" >
                                             <img src="images/empty_maintain.png" class="_2" alt="" >
                                             <div class="details" ng-if="busLotDetails.bayId==48 || busLotDetails.bayId==49 || busLotDetails.bayId==50 || busLotDetails.bayId==51 ">
-                                                <div class="num ">SBST</div>
+                                                <!--<div class="num ">SBST</div>-->
                                                 <!--<div class="time ">12:15</div>-->
                                             </div>
                                         </div>
@@ -158,7 +158,7 @@
                 <div class="busFilterMain moreBtm">
 
                     <div class="mainSummary marginBtm">
-                        <div class="heading subNormal ">Bus Arrival</div>
+                        <div class="heading subNormal ">Taxi Arrival</div>
 
                         <div class="content midBlock">
 
@@ -224,7 +224,7 @@
                 <!--.... Bus Arrival schedule ......-->
                 <div class="busFilterMain moreBtm">
                     <div class="mainSummary marginBtm">
-                        <div class="heading subNormal ">Bus Departure</div>
+                        <div class="heading subNormal ">Taxi Departure</div>
 
                         <div class="content midBlock">
 

@@ -5,11 +5,11 @@
 smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoService,busEntryExitService,busLotService,settingsService) {
     $scope.historicalGraphDataValues = {/*$scope.historicalGraphDataValues.bertIndex*/
         parameterLabel:'LOADING BERTH',
-        parameterSelected:'loadingBerth',
+        parameterSelected:'busEntryExit',
         seriesSelected:15,
         seriesLabel:15,
         seriesParameter:'min',
-        bertIndex:1,
+        bertIndex:1/*,
         'loadingBerth':{
             services:loadingOccupancyInfoService,
             chartUpdateType:updateMultipleSeriesOfAGraph,
@@ -20,7 +20,7 @@ smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoServ
             },
             primaryChartLabel:"Queue Occupancy",
             secondaryChartLabel:"Elderly Area Occupancy"
-        },
+        }*/,
         'elderlyLoadingBerth':{
             services:loadingOccupancyInfoService,
             chartUpdateType:updateSingleSeriesOfAGraph,
@@ -35,12 +35,12 @@ smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoServ
         'busEntryExit':{
             services:busEntryExitService,
             chartUpdateType:updateMultipleSeriesOfAGraph,
-            yAxis:'No Of Busses',
+            yAxis:"No Of Taxi's",
             legendProperties:{
-                value:['Bus Entry','Bus Exit'],
+                value:['Taxi Entry','Taxi Exit'],
                 incremental:false
             },
-            primaryChartLabel:"Bus Entry Exit",
+            primaryChartLabel:"Taxi Entry And  Exit",
             secondaryChartLabel:"Elderly Area Occupancy"
         },
         'busParking':{
@@ -48,19 +48,19 @@ smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoServ
             chartUpdateType:updateSingleSeriesOfAGraph,
             yAxis:'Count (Occupied)',
             legendProperties:{
-                value:['Bus Parking'],
+                value:['Taxi Parking'],
                 incremental:true
             },
-            primaryChartLabel:"Bus Parking",
+            primaryChartLabel:"Taxi Parking",
             secondaryChartLabel:"Unloading Bay"
         },
         bertIndexFlag:true,
-        elderlyGraphFlag:true,
+        elderlyGraphFlag:false,
         chartDetails:{
             label:"Line Graph",
             type:'line',
             graphSeriesColors:['#d6e586', '#7edd83', '#f9b343', '#e87294', '#5bc3c2'],
-            chart1Label:"Queue Occupancy",
+            chart1Label:"Taxi Entry And  Exit",
             chart2Label:"Elderly Area Occupancy",
             chart1Data:'',
             chart2Data:''
@@ -360,7 +360,6 @@ smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoServ
         })
     }
     function init(){
-
         divideTimeRangeIn60Part($scope.historicalGraphDataValues.seriesSelected);
         getRouteNoForLoadingOccupancy();
     }
