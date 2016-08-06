@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#!/bin/bash
+
+trap "kill -- -$$" EXIT
+
+chmod +x nodejs/bin/node
+
+export PATH=$PWD/nodejs/bin
+
+node pulse-smrt-woodlands-dashboard.js generate-configuration configuration.json
+
+node app.js

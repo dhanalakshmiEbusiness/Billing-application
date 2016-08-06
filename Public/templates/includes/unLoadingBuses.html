@@ -1,0 +1,92 @@
+<div class="busLanesMain moreBtm unloading">
+    <div class="mainSummary marginBtm">
+        <div class="heading subNormal " ng-if="!admin || currentRout('app/analyticsAll')">Unloading Berth</div>
+        <div class="content midBlock">
+            <!--<img src="images/female.png" alt="" class="icon midBlock marginRgtSrt">-->
+            <div class="midBlock largeTxt num female">
+                <!--<div class="">{{demographicRelatedDetails.graphDetails.adultCount}}</div>-->
+                <div class="" ng-bind="unloadingBayDetails.statusCount.occupied"></div>
+                <div class="tag">Occupied</div>
+            </div>
+            <div class="topBlock robotoThin largeTxt slash">/</div>
+            <div class="midBlock largeTxt num male">
+                <!--<div class="">{{demographicRelatedDetails.graphDetails.elderCount}}</div>-->
+                <div class="" ng-bind="unloadingBayDetails.statusCount.empty"></div>
+                <div class="tag">Empty</div>
+            </div>
+            <!--<img src="images/male.png" alt="" class="icon midBlock marginLeftSrt">-->
+        </div>
+        <div class="divider"></div>
+        <div class="timeIndicator leftTxt smallest">
+            <div class="midBlock"> {{unloadingBertDate|date:'mediumTime'}}</div>
+            <div class="midBlock indicatorDot red marginLeftSrt" ng-if="!unloadingBayDetails.isUnloaderDataRecieved"></div>
+            <div class="midBlock indicatorDot green marginLeftSrt" ng-if="unloadingBayDetails.isUnloaderDataRecieved"></div>
+        </div>
+    </div>
+    <div class="unloadingLanes" >
+
+        <ul>
+            <li ng-repeat="unloadingBayDetails in unloadingBayDetails.unloadingBayArray track by $index">
+                <div class="busNum" ng-bind="unloadingBayDetails.bayId"></div>
+                <div class="busIcon">
+                    <img src="images/unloadingBus.png" ng-if="unloadingBayDetails.status==1">
+                    <img src="images/unloadingEmpty.png" ng-if="unloadingBayDetails.status==0">
+                    <img src="images/unloadingEmpty_maintain.png" ng-if="unloadingBayDetails.status==2">
+                    <!--<div class="busNum" ng-if="unloadingBayDetails.status==1">914</div>-->
+
+                    <div class="passIcon">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </li>
+            <!--            <li>
+                <div class="busIcon">
+                    <img src="images/unloadingBus.png">
+                    <div class="busNum">914</div>
+
+                    <div class="passIcon">
+                        <div class="dot"></div>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="busIcon">
+                    <img src="images/unloadingBus.png">
+                    <div class="busNum">914</div>
+                </div>
+
+            </li>
+            <li>
+                <div class="busIcon">
+                    <img src="images/unloadingBus.png">
+                    <div class="busNum">914</div>
+                </div>
+
+            </li>
+            <li>
+                <div class="busIcon">
+                    <img src="images/unloadingEmpty.png">
+                    <div class="busNum">914</div>
+                </div>
+
+            </li>
+            <li>
+                <div class="busIcon">
+                    <img src="images/unloadingBus.png">
+                    <div class="busNum">914</div>
+                </div>
+
+            </li>
+            <li>
+                <div class="busIcon">
+                    <img src="images/unloadingBus.png">
+                    <div class="busNum">914</div>
+                </div>
+
+            </li>-->
+            <span class="clear"></span>
+        </ul>
+    </div>
+
+</div>

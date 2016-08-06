@@ -1,0 +1,47 @@
+<div class="analytics">
+    <div class="topSlider roboLight">
+        <date-slider slider-type="hour" navigation="true" calendar="false"></date-slider>
+    </div>
+    
+    
+    <div class="analyticsCont contentBox">
+        <!--<div class="subHeader small marginBtm">-->
+            <!--&lt;!&ndash;<div class="floatLeft">Occupancy</div>&ndash;&gt;-->
+            <!--<div class="floatRight">-->
+                <!--<div class="dataOpt" ng-click="test()">-->
+                    <!--&lt;!&ndash;<div class="historical opt midBlock">Historical</div>&ndash;&gt;-->
+                    <!--<div class="live opt midBlock active name">Live</div>-->
+                    <!--&lt;!&ndash;<div class="predictive opt midBlock">Predictive</div>&ndash;&gt;-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<span class="clear"></span>-->
+        <!--</div>-->
+
+        <div class="marginTop">
+            <!--....... Unloading buses .........-->
+            <div ng-include="'templates/includes/unLoadingBuses.html'" ng-controller="unloadingCtrl"></div>
+
+            <!--.......... age summary ........-->
+            <div ng-include="'templates/includes/demographicDetails.html'"
+                 ng-controller="demographicDetailsCtrl"></div>
+
+            <!--....... parking buses .........-->
+            <div ng-include="'templates/includes/busParking.html'"
+                 ng-controller="busLotCtrl"></div>
+
+
+            <!--......... loading buses ...........-->
+            <div ng-include="'templates/includes/loadingOccupancyDetails.html'"
+                 ng-controller="loadingOccupancyCtrl"></div>
+
+            <!--....... Bus schedule .........-->
+            <div ng-include="'templates/includes/busScheduleDetailsForUser.html'" ng-controller="busEntryExitUserCtrl"></div>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>

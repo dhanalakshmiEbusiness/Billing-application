@@ -1,0 +1,54 @@
+<div id="appHeader">
+    <div class="leftCont floatLeft">
+        <div class="logo">
+            <img src="images/smrtLogo.png" alt="" class="smrt midBlock">
+            <img src="images/NEC_Logo.png" alt="" class="nec midBlock">
+        </div>
+    </div>
+    <span class="clear"></span>
+</div>
+
+
+<div id="contWrapper" class="lightBack">
+
+    <div>
+        <div class="loginMain lightBack" >
+            <div class="loginSec">
+                <div class="logTitle midTitle centerTxt roboRegular">Welcome</div>
+                <div class="marginTop centerTxt roboLight subNormal" style="color: red">
+                    {{error}}
+                    {{message}}
+                </div>
+                <ul class="form marginTop">
+                    <li><input type="text" placeholder="Username" class="subNormal" ng-model="user.username"></li>
+                    <li><input type="password" placeholder="Password" class="subNormal" ng-model="user.password"></li>
+                </ul>
+                <div ng-click="checkValidation(user)" class="loginBtn subNormal">
+                    Login
+                    <div class="loaderBar">
+                        <div id="circularG">
+                            <div id="circularG_1" class="circularG"></div>
+                            <div id="circularG_2" class="circularG"></div>
+                            <div id="circularG_3" class="circularG"></div>
+                            <div id="circularG_4" class="circularG"></div>
+                            <div id="circularG_5" class="circularG"></div>
+                            <div id="circularG_6" class="circularG"></div>
+                            <div id="circularG_7" class="circularG"></div>
+                            <div id="circularG_8" class="circularG"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="signUp">
+                    <!--<a href="#/signUp" class="small">Create a new account</a>-->
+
+                    <!--<a href="#/app/analytics" ng-click="setFlag()" class="subNormal">Enter as a guest</a>-->
+                </div>
+
+
+                <!--<a href="#/app/analytics" ng-click="setFlag()" class="small">View Data Without Login</a>-->
+            </div>
+        </div>
+    </div>
+
+</div>

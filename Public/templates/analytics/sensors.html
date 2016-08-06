@@ -1,0 +1,61 @@
+<div class="sensorsMain" ng-controller="sensorDetectionCtrl" >
+
+
+    <div class="sensorsList">
+
+        <div class="mainSummary marginBtm">
+            <div class="content midBlock">
+
+            </div>
+            <div class="divider"></div>
+        </div>
+        <div class="dataTable sensorTable" >
+            <div class="dataRow subNormal">
+                <ul class="rowCont" ng-repeat="data in sensorDetectionList">
+
+                    <li class="camIcon">
+                        <div class="content">
+                            <div class="camImg">
+                                <img src="images/camera.png" class="licenseIcon" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bay">
+
+                        <div class="content">{{data.SensorName | split:',':0}}</div>
+                    </li>
+                    <li class="camName">
+                        <div class="content">{{data.SensorName | split:',':1}}</div>
+                    </li>
+                    <li class="isOnline online">
+                        <div class="content">{{data.Status}}</div>
+                    </li>
+                    <li class="onlineStatus" ng-if="data.Status=='Online'" >
+                        <div class="content">
+                            <div class="circle online"></div>
+                        </div>
+                    </li>
+                    <li class="onlineStatus"  ng-if="data.Status=='Offline'">
+                        <div class="content">
+                            <div class="circle offline"></div>
+                        </div>
+                    </li>
+                    <span class="clear"></span>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!--..... pagination .......-->
+   <!-- <ul class="pagination marginTop">
+        <li>1</li>
+        <li>2</li>
+        <li class="active">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>-->
+
+</div>

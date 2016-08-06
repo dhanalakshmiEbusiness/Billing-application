@@ -1,0 +1,90 @@
+<div id="appHeader">
+  <div class="leftCont floatLeft">
+    <div class="logo">
+      <img src="images/smrtLogo.png" alt="">
+    </div>
+  </div>
+  <span class="clear"></span>
+</div>
+
+
+<div id="contWrapper" class="lightBack">
+
+  <div>
+    <div class="loginMain lightBack" ><!--ng-controller="loginctrl"-->
+      <div class="loginSec">
+        <div class="logTitle midTitle centerTxt roboRegular">Sign Up</div>
+        <ul class="form marginTop">
+          <li><input type="text" placeholder="Username" class="subNormal" ng-model="user.username" > </li>
+          <li><input type="password" placeholder="Password" class="subNormal" ng-model="user.password" ></li>
+          <li><input type="text" placeholder="email" class="subNormal" ng-model="user.email"></li>
+          <li><input type="text" placeholder="firstName" class="subNormal" ng-model="user.firstName"></li>
+          <li><input type="text" placeholder="lastName" class="subNormal" ng-model="user.lastName"></li>
+        </ul>
+        <div  ng-click="signUp(user)" class="loginBtn subNormal">SignUp</div>
+        <div class="marginTopShort" style="color: red">
+          {{error}}
+        </div>
+      </div>
+      <div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!--<div>
+  <form  name="formx"  ng-submit="signUp(user)">
+
+    <div class="form-group">
+      <label><span class="glyphicon glyphicon-asterisk red"></span>UserName:</label>
+      <input type="text" name='UserName' ng-model='user.username' required="" placeholder="Enter Username"
+             class="form-control">
+      <div ng-show="formx.$submitted || formx.UserName.$touched">
+        <div style="position: absolute;margin-left: 120px;" ng-show="formx.UserName.$error.required"><p>UserName is required.</p></div>
+      </div>
+    </div>
+    <div style="color: red;margin: auto">{{error}}</div>
+    <div class="form-group" >
+      <label ><span class="glyphicon glyphicon-asterisk red"></span>PassWord:</label>
+      <input   type="password" name='Password'   ng-model='user.password'  placeholder="Enter Password "   class="form-control" required="">
+      <div ng-show="formx.$submitted || formx.Password.$touched">
+        <div style="position: absolute;margin-left: 120px;"  ng-show="formx.Password.$error.required"><p>Password is required.</p></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label><span class="glyphicon glyphicon-asterisk red"></span>EmailId:</label>
+      <input type="text" name='email' ng-model='user.email' required="" placeholder="Enter email"
+             class="form-control">
+      <div ng-show="formx.$submitted || formx.email.$touched">
+        <div style="position: absolute;margin-left: 120px;" ng-show="formx.email.$error.required"><p>email is required.</p></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>firstName:</label>
+      <input type="text" name='firstName' ng-model='user.firstName'  placeholder="Enter firstName"
+             class="form-control">
+       &lt;!&ndash; <div ng-show="formx.$submitted || formx.firstName.$touched">
+          <div style="position: absolute;margin-left: 120px;" ng-show="formx.firstName.$error.required"><p>firstName is required.</p></div>
+        </div>&ndash;&gt;
+    </div>
+    <div class="form-group">
+      <label>lastName:</label>
+      <input type="text" name='lastName' ng-model='user.lastName'  placeholder="Enter lastName"
+             class="form-control">
+     &lt;!&ndash; <div ng-show="formx.$submitted || formx.lastName.$touched">
+        <div style="position: absolute;margin-left: 120px;" ng-show="formx.lastName.$error.required"><p>lastName is required.</p></div>
+      </div>&ndash;&gt;
+    </div>
+    <button type="submit" class="btn btn-info">Register</button>
+
+  </form>
+
+</div>-->
+
+
+

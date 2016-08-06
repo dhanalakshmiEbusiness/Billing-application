@@ -1,0 +1,249 @@
+*{
+    outline: none;
+}
+a{
+    color: #5b5b5b;
+    text-decoration: none;
+    outline: medium none;
+}
+input {
+    border: none;
+    /*color: #ffffff;*/
+    /*font-family: robotolight;*/
+    outline: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.largeTxt{
+    font-size: 32px;
+}
+.mainTitle{
+    font-size: 28px;
+}
+.title{
+    font-size: 24px;
+}
+.subTitle{
+    font-size: 22px;
+}
+.midTitle{
+    font-size: 20px;
+}
+.smallTitle{
+    font-size: 18px;
+}
+.mainNormal{
+    font-size: 17px;
+}
+.normal{
+    font-size: 16px;
+}
+.subNormal{
+    font-size: 15px;
+}
+.small{
+    font-size: 14px;
+}
+.smallest{
+    font-size: 13px;
+}
+.pointer{
+    cursor: pointer;
+}
+/*.helveticaRegular{*/
+    /*font-family: helveticaNeue;*/
+/*}*/
+/*.helveticaLight{*/
+    /*font-family: helveticaneuelight;*/
+/*}*/
+/*.robotoThin{*/
+    /*font-family: robotothin;*/
+/*}*/
+
+.paddingBtmExtra{
+    padding-bottom: 80px;
+}
+.borderBtm{
+    border-bottom: 1px solid #b4b4b4;
+}
+.borderLft{
+    border-left: 1px solid #b4b4b4;
+}
+.borderRgt{
+    border-right: 1px solid #b4b4b4;
+}
+.borderTop{
+    border-top: 1px solid #b4b4b4;
+}
+.borderTopDot{
+    border-top: 1px dashed #b4b4b4;
+}
+
+.paddingFull{
+    padding: 20px 30px;
+}
+.paddingLR{
+    padding: 0 20px;
+}
+.paddingRgt{
+    padding-right: 20px;
+}
+.paddingTB{
+    padding: 20px 0;
+}
+.paddingTop{
+    padding-top: 20px;
+}
+.paddingLft{
+    padding-left: 20px;
+}
+.paddingBtm{
+    padding-bottom: 20px;
+}
+.marginFull{
+    margin: 20px 130px;
+}
+.marginLR{
+    margin: 0 30px;
+}
+.marginBtm{
+    margin-bottom: 20px;
+}
+.moreBtm{
+    margin-bottom: 60px;
+}
+.marginTopSml{
+    margin-top: 10px;
+}
+.marginTopShort{
+    margin-top: 5px;
+}
+.marginBtmSml{
+    margin-bottom: 10px;
+}
+.marginBtmSrt{
+    margin-bottom: 5px;
+}
+.marginLeft{
+    margin-left: 20px;
+}
+.marginLeftSml{
+    margin-left: 10px;
+}
+.marginLeftSrt{
+    margin-left: 5px;
+}
+.marginRgt{
+    margin-right: 20px;
+}
+.marginRgtSml{
+    margin-right: 10px;
+}
+.marginRgtSrt{
+    margin-right: 5px;
+}
+.marginTop{
+    margin-top: 20px;
+}
+.marginTopSml{
+    margin-top: 10px;
+}
+.marginTB{
+    margin: 15px 0;
+}
+.marginTBSml{
+    margin: 10px 0;
+}
+.centerTxt{
+    text-align: center;
+}
+.rightTxt{
+    text-align: right;
+}
+
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+.overflowHide{
+    overflow: hidden;
+}
+.midBlock{
+    display: inline-block;
+    vertical-align: middle;
+}
+.midBlockSeq{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -5px;
+}
+.topBlock{
+    display: inline-block;
+    vertical-align: top;
+}
+.relative{
+    position: relative;
+}
+.clear{
+    clear: both;
+    display: block;
+}
+
+.block{
+    display: block;
+}
+.inBlock{
+    display: inline-block;
+}
+
+.bold{
+    font-weight: bold;
+}
+.highlight{
+    color: #af2f80;
+}
+.whiteBack{
+    background: #ffffff;
+}
+.whiteFont{
+    color: #ffffff;
+}
+
+.lightGreyBack{
+    background: #e5e5e5;
+}
+.lightBack{
+    background: #f3f3f3;
+}
+.lightColor{
+    color: #9c9c9c;
+}
+.error{
+    color: #DA4444;
+}
+
+
+.solidGaugeCircle{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.pieCircle{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.slider{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.flashGraph{
+    height: 200px;
+}

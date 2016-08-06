@@ -1,0 +1,198 @@
+<div class=" contentBox marginBtm">
+    <div class="analytDataType paddingLR">
+        <div class="subHeader small statsHeader paddingFull borderBtm marginBtm">
+            <div class="floatLeft marginTopShort">
+                <div class="dataOpt">
+                    <a href="#/app/stats/historicalStat" class="historical opt midBlock active">Historical</a>
+                   <!-- <a href="#/app/stats/predictiveStat" class="predictive opt midBlock">Predictive</a>-->
+                </div>
+            </div>
+            <div class="floatRight">
+                <div class="dropDown trans medium small topBlock marginLeftSml">
+                    <div class="head" data-init=0>
+                        <div class="headTitle">Loading Berth</div>
+                        <div class="sign">
+                            <img src="images/dropDown.png" alt=""/>
+                        </div>
+                        <span class="clear"></span>
+                    </div>
+                    <ul class="list">
+                        <li ng-click="setParameterForHistoricalData('loadingBerth','')">Loading Berth</li>
+                        <li ng-click="setParameterForHistoricalData('busEntryExit','')">Bus Entry and Exit</li>
+                        <li ng-click="setParameterForHistoricalData('busParking','')">Bus Parking</li>
+                        <!-- <li ng-click="setParameterForHistoricalData('unLoadingBerth')">UNLOADING BERTH</li>
+                        <li ng-click="setParameterForHistoricalData('busParking')">BUS PARKING</li>
+                        <li ng-click="setParameterForHistoricalData('busArrival')">BUS ARRIVAL</li>
+                        <li ng-click="setParameterForHistoricalData('busDeparture')">BUS DEPARTURE</li>-->
+                    </ul>
+                </div>
+                <div class="dropDown trans small topBlock now">
+                    <div class="head" data-init=0>
+                        <div class="headTitle">{{historicalGraphDataValues.seriesSelected}}&nbsp{{historicalGraphDataValues.seriesParameter}}</div>
+                        <div class="sign">
+                            <img src="images/dropDown.png" alt=""/>
+                        </div>
+                        <span class="clear"></span>
+                    </div>
+                    <ul class="list">
+                        <li ng-click="setSeriesLengthForHistoricalData(15,'min')">Last 15 min</li>
+                        <li ng-click="setSeriesLengthForHistoricalData(30,'min')">Last 30 min</li>
+                        <li ng-click="setSeriesLengthForHistoricalData(60,'hour')">Last 1 hour</li><!--
+                        <li ng-click="setSeriesLengthForHistoricalData(43200,'month')">Last 1 month</li>-->
+                    </ul>
+                </div>
+                <div class="dropDown trans small topBlock now" ng-show="historicalGraphDataValues.bertIndexFlag">
+                    <div class="head" data-init=0>
+                        <div class="headTitle">Berth {{historicalGraphDataValues.bertIndex}}</div>
+                        <div class="sign">
+                            <img src="images/dropDown.png" alt=""/>
+                        </div>
+                        <span class="clear"></span>
+                    </div>
+                    <ul class="list">
+                        <li ng-click="setBerthIndexForHistoricalData(1)">Berth 1</li>
+                        <li ng-click="setBerthIndexForHistoricalData(2)">Berth 2</li>
+                        <li ng-click="setBerthIndexForHistoricalData(3)">Berth 3</li>
+                        <li ng-click="setBerthIndexForHistoricalData(4)">Berth 4</li>
+                        <li ng-click="setBerthIndexForHistoricalData(5)">Berth 5</li>
+                        <li ng-click="setBerthIndexForHistoricalData(6)">Berth 6</li>
+                        <li ng-click="setBerthIndexForHistoricalData(7)">Berth 7</li>
+                        <li ng-click="setBerthIndexForHistoricalData(8)">Berth 8</li>
+                        <li ng-click="setBerthIndexForHistoricalData(9)">Berth 9</li>
+                    </ul>
+                </div>
+               <!-- <div class="dropDown trans small topBlock now" ng-show="historicalGraphDataValues.scaleIndexFlag">
+                    <div class="head" data-init=0>
+                        <div class="headTitle">{{historicalGraphDataValues.scaleMeasurement}}</div>
+                        <div class="sign">
+                            <img src="images/dropDown.png" alt=""/>
+                        </div>
+                        <span class="clear"></span>
+                    </div>
+                    <ul class="list">
+                        <li ng-click="setScaleForHistoricalData('percentage')">Percentage</li>
+                        <li ng-click="setScaleForHistoricalData('count')">Count</li>
+                    </ul>
+                </div>-->
+                <div class="dropDown trans small topBlock now">
+                    <div class="head" data-init=0>
+                        <div class="headTitle">{{historicalGraphDataValues.chartDetails.label}}</div>
+                        <div class="sign">
+                            <img src="images/dropDown.png" alt=""/>
+                        </div>
+                        <span class="clear"></span>
+                    </div>
+                    <ul class="list">
+                        <li ng-click="chartTypeUpdate('areaspline','.flashGraphMain','.flashGraph');setGraphTitle('Area Spline','areaspline')">Area Spline</li>
+                        <li ng-click="chartTypeUpdate('column','.flashGraphMain','.flashGraph');setGraphTitle('Column','column')">Column</li>
+                        <li ng-click="chartTypeUpdate('spline','.flashGraphMain','.flashGraph');setGraphTitle('Spline','spline')">Spline</li>
+                        <li ng-click="chartTypeUpdate('area','.flashGraphMain','.flashGraph');setGraphTitle('Spark Line','area')">Spark Line</li>
+                        <li ng-click="chartTypeUpdate('line','.flashGraphMain','.flashGraph');setGraphTitle('Line','line')">Line</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="clear"></span>
+        </div>
+
+        <div class="statSectionMain">
+            <div class="statSection">
+                <!--<div class="name smallTitle borderBtm marginBtm">STATS</div>-->
+
+                <div class="graph marginBtm">
+                    <div class="mainNormal centerTxt">{{historicalGraphDataValues.chartDetails.chart1Label}}</div>
+                    <flash-graph type="line" x="queueX" y="queueY"
+                                 label-x="true"
+                                 label-y="true"
+                                 grid-line-color="#2a3040"
+                                 grid-width-y="1"
+                                 series-width="2"
+                                 series-fill-color="rgba(56, 72, 91, 0.45)"
+                                 series-marker="true"
+                                 legend="true"
+                                 id="historicalChart"
+                                 columnStack="false"
+                                 margin-bottom="80"
+                                 margin-left="80"
+                                 title-y="Occupancy"
+                                 title-x="Occupancy"
+                                 additional-features="additionalFeatures">
+                    </flash-graph>
+
+                    <div class="loader" ng-show="historicalGraphDataValues.loaderStatus.chartOne">
+                        <div class="ballsWaveG ballsWaveG_1"></div>
+                        <div class="ballsWaveG ballsWaveG_2"></div>
+                        <div class="ballsWaveG ballsWaveG_3"></div>
+                        <div class="ballsWaveG ballsWaveG_4"></div>
+                        <div class="ballsWaveG ballsWaveG_5"></div>
+                        <div class="ballsWaveG ballsWaveG_6"></div>
+                        <div class="ballsWaveG ballsWaveG_7"></div>
+                        <div class="ballsWaveG ballsWaveG_8"></div>
+                    </div>
+                </div>
+                <div class="graph paddingTop" ng-show="historicalGraphDataValues.elderlyGraphFlag">
+                    <div class="mainNormal centerTxt">{{historicalGraphDataValues.chartDetails.chart2Label}}</div>
+                    <flash-graph type="line" x="eldersX" y="eldersY"
+                                 label-x="true"
+                                 label-y="true"
+                                 grid-line-color="#2a3040"
+                                 grid-width-y="1"
+                                 series-width="2"
+                                 series-fill-color="rgba(56, 72, 91, 0.45)"
+                                 series-marker="true"
+                                 id="elderlyChart"
+                                 margin-bottom="80"
+                                 margin-left="80"
+                                 title-y="Occupancy"
+                                 title-x="Occupancy"
+                                 additional-features="additionalFeatures">
+                    </flash-graph>
+
+                    <div class="loader" ng-show="historicalGraphDataValues.loaderStatus.chartOne">
+                        <div class="ballsWaveG ballsWaveG_1"></div>
+                        <div class="ballsWaveG ballsWaveG_2"></div>
+                        <div class="ballsWaveG ballsWaveG_3"></div>
+                        <div class="ballsWaveG ballsWaveG_4"></div>
+                        <div class="ballsWaveG ballsWaveG_5"></div>
+                        <div class="ballsWaveG ballsWaveG_6"></div>
+                        <div class="ballsWaveG ballsWaveG_7"></div>
+                        <div class="ballsWaveG ballsWaveG_8"></div>
+                    </div>
+                </div>
+
+
+
+                <!--<div class="graphicalStats">-->
+                    <!--<div class="graphMain  timeGraph topBlock">-->
+                        <!--<div class="name">PEOPLE</div>-->
+                        <!--<div class="graph">-->
+                            <!--<area-spline x="timeX" y="timeY"></area-spline>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="graphMain ageGraph topBlock">-->
+                        <!--<div class="name marginLeft">AGE & GENDER</div>-->
+                        <!--<div class="graph marginTop">-->
+                            <!--<column-chart x="ageX" y="ageY"-->
+                                          <!--bar-size="12"-->
+                                          <!--bar-radius="8"></column-chart>-->
+                        <!--</div>-->
+                        <!--<div class="numbers roboLight">-->
+                            <!--<div class="male midBlock marginLeft">-->
+                                <!--<img src="images/male.png" alt="" class="icon midBlock">-->
+                                <!--<div class="num midBlock">241</div>-->
+                                <!--<div class="midBlock">M</div>-->
+                            <!--</div>-->
+                            <!--<div class="female midBlock">-->
+                                <!--<img src="images/female.png" alt="" class="icon midBlock">-->
+                                <!--<div class="num midBlock">241</div>-->
+                                <!--<div class="midBlock">F</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+            </div>
+        </div>
+    </div>
+
+</div>

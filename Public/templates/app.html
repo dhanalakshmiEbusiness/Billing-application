@@ -1,0 +1,205 @@
+<div id="appHeader">
+    <div class="leftCont floatLeft">
+        <div class="logo">
+            <img src="images/smrtLogo.png" alt="" class="smrt midBlock">
+            <img src="images/NEC_Logo.png" alt="" class="nec midBlock">
+        </div>
+    </div>
+    <div class="rightCont floatRight roboLight" ng-if="admin">
+        <div class="notificationBtn midBlock small" data-init="0" ng-click="manageNotif()" ng-controller="notificationCtrl">
+            <div class="txt midBlock">Notifications</div>
+            <div class="num midBlock">{{notificationDetails.notificationArray.length}}</div>
+        </div>
+        <div class="logout midBlock subNormal pointer" ng-controller="loginCtrl" ng-click="logout()">Logout</div>
+    </div>
+    <span class="clear"></span>
+</div>
+
+
+<div id="contWrapper">
+    <div class="sideNavMain" ng-if="admin">
+        <ul class="sideNav roboLight smallest">
+            <li ng-class="{active: currentRout('app/analyticsAdmin')}">
+                <a href="#/app/analyticsAdmin/unloadingBerth">
+                    <img src="images/live_inactive.png" alt="" class="icon inactive">
+                    <img src="images/live_active.png" alt="" class="icon active">
+                    <div class="name">Live</div>
+                </a>
+            </li>
+            <li ng-class="{active: currentRout('app/analyticsAll')}">
+                <a href="#/app/analyticsAll">
+                    <img src="images/All_Inactive.png" alt="" class="icon inactive">
+                    <img src="images/All_Active.png" alt="" class="icon active">
+                    <div class="name">Dashboard</div>
+                </a>
+            </li>
+            <li ng-class="{active: currentRout('app/stats')}">
+                <a href="#/app/stats/historicalStat">
+                    <img src="images/analytics_inactive.png" alt="" class="icon inactive">
+                    <img src="images/analytics_Active.png" alt="" class="icon active">
+                    <div class="name">Analytics</div>
+                </a>
+            </li>
+            <li ng-class="{active: currentRout('app/settings')}">
+                <a href="#/app/settings/settingsTabs/users">
+                    <img src="images/settings_inactive.png" alt="" class="icon inactive">
+                    <img src="images/settings_active.png" alt="" class="icon active">
+                    <div class="name">Settings</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <div id="pageCont"  ui-view ng-class="{admin: admin}"></div>
+
+
+
+    <div class="notifications" ng-controller="notificationCtrl">
+        <div class="searchBox marginBtmSml">
+            <input type="text" placeholder="Search" class="small" ng-model="searchNotif">
+            <div class="searchBtn"></div>
+        </div>
+
+        <ul class="notificationList">
+            <!--<li data-init="0">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around 60 % occupancy of Physically Challenged at </div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">Berth 1</div>
+                        <div class="time">12:35 AM, 4.3.2016</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>-->
+            <li data-init="0" ng-repeat="notification in notificationDetails.notificationArray track by $index">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around {{notification.occupancy | number:0}}% occupancy of Physically Challenged at</div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">Berth {{notification.bertIndex}}</div>
+                        <div class="time">{{notification.date | date:'medium'}}</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock" ng-click="sendSMSNotification(notification)">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>
+            <!--<li data-init="0">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around 100 peoples in</div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">S K Nanagr, 3rd cross</div>
+                        <div class="time">12:35 PM, 30.10.2015</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>
+            <li data-init="0">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around 100 peoples in</div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">S K Nanagr, 3rd cross</div>
+                        <div class="time">12:35 PM, 30.10.2015</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>
+            <li data-init="0">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around 100 peoples in</div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">S K Nanagr, 3rd cross</div>
+                        <div class="time">12:35 PM, 30.10.2015</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>
+            <li data-init="0">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around 100 peoples in</div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">S K Nanagr, 3rd cross</div>
+                        <div class="time">12:35 PM, 30.10.2015</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>
+            <li data-init="0">
+                <div class="symbol">
+                    <img src="images/personNotif.png">
+                </div>
+                <div class=" notificationTxt small">
+                    <div class="">Around 100 peoples in</div>
+                    <div class="roboLight marginTopShort">
+                        <div class="address">S K Nanagr, 3rd cross</div>
+                        <div class="time">12:35 PM, 30.10.2015</div>
+                    </div>
+
+                    <div class="actionBtn small">
+                        <div class="btn notify midBlock">Notify</div>
+                        <div class="btn alert midBlock">Alert</div>
+                    </div>
+                </div>
+            </li>-->
+        </ul>
+    </div>
+
+
+    <div class="background"></div>
+
+    <!--..... Smrt map ......-->
+    <div class="smrtMapMain popup" ng-controller="mapController">
+        <div class="close" ng-click="setMapStatus(false)">X</div>
+        <span class="clear"></span>
+        <div class="mapCont">
+            <!--<img src="images/Wlds Dashboard Map.png" alt="">-->
+            <openlayers ol-center="center" ol-defaults="defaults" custom-layers="true" >
+                <ol-layer ol-layer-properties="layer" ng-repeat="layer in layers"></ol-layer>
+               <!-- <ol-marker ng-repeat="trollry in trollies" ol-marker-properties="trollry"></ol-marker>-->
+            </openlayers>
+        </div>
+    </div>
+
+
+</div>

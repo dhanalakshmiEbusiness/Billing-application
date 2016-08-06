@@ -1,0 +1,17 @@
+<div class="loginMain lightBack" ><!--ng-controller="loginctrl"-->
+    <div class="loginSec">
+        <div class="logTitle midTitle centerTxt roboRegular">Welcome</div>
+        <ul class="form marginTop">
+            <li><input type="text" placeholder="Username" class="subNormal" ng-model="user.username"></li>
+            <li><input type="password" placeholder="Password" class="subNormal" ng-model="user.password"></li>
+        </ul>
+        <div ng-click="checkValidation(user)" class="loginBtn subNormal">Login</div>
+
+        <div class="signUp">
+            <a href="#/userPage/signUp" class="small">Create a new account</a>
+        </div>
+    </div>
+</div>
+<div style="color: red">
+ {{error}}
+</div>

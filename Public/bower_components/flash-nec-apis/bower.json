@@ -1,0 +1,26 @@
+{
+  "name": "flash-nec-apis",
+  "homepage": "https://github.com/saleemflashbox/OURAPIS",
+  "authors": [
+    "saleemflashbox <saleem@flashbox.in>"
+  ],
+  "description": "Sliders and graphs Apis for NEC projects",
+  "svn": "1.0.0",
+  "git": "1.0.0",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "highcharts": "^4.2.5",
+    "jquery-ui": "^1.11.4",
+    "angular": "^1.5.6",
+    "jquery": "^2.2.4",
+    "moment": "^2.13.0"
+  }
+}

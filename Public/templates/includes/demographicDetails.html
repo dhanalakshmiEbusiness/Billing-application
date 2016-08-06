@@ -1,0 +1,70 @@
+<div class="ageBaseSummary moreBtm">
+    <div class="content borderTopDot" ng-if="demographicRelatedDetails.status.showGenderCount">
+        <div class="genderSummary roboLight floatLeft">
+            <div class="name small marginBtmSml orgFont" ng-if="!admin" >Gender & Age</div>
+            <div class="summary borderRgt ">
+                <div class="marginBtm">
+                    <img src="images/male.png" alt="" class="icon midBlock">
+                    <div class="largeTxt midBlock more marginLeftSml" ng-bind="demographicRelatedDetails.graphDetails.maleCount"></div>
+                    <div class="small midBlock marginLeftSml">M</div>
+                </div>
+                <div class="">
+                    <img src="images/female.png" alt="" class="icon midBlock">
+                    <div class="largeTxt midBlock less marginLeftSml" ng-bind="demographicRelatedDetails.graphDetails.femaleCount"></div>
+                    <div class="small midBlock marginLeftSml">F</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="graphSummaryMain">
+            <div class="dropDown timeDropDown floatRight small">
+                <div class="head" data-init=0>
+                    <div class="headTitle" ng-bind="demographicRelatedDetails.graphDetails.secondsSelectedForDropDown"></div>
+                    <div class="sign">
+                        <img src="images/dropDown.png" alt=""/>
+                    </div>
+                    <span class="clear"></span>
+                </div>
+                <ul class="list">
+                    <li ng-click="setSecondsForDemographicGraph(30)">Last 30 Sec</li>
+                    <li ng-click="setSecondsForDemographicGraph(300)">Last 5 min</li>
+                    <li ng-click="setSecondsForDemographicGraph(900)">Last 15 min</li>
+                    <li ng-click="setSecondsForDemographicGraph(3600)">Last 1 hour</li>
+                </ul>
+            </div>
+            <span class="clear"></span>
+
+            <div class="graphSummary">
+                <div class="graph" id="demographicGraph">
+                    <column-chart x="demographicRelatedDetails.graphDetails.xAxisDay"
+                                  y="demographicRelatedDetails.graphDetails.yAxisDay"
+                                  bar-size="28"
+                                  bar-radius="0"></column-chart>
+
+                </div>
+            </div>
+            <div class="loader" ng-show="demographicRelatedDetails.graphDetails.graphDetailsFlag"></div>
+        </div>
+
+        <div class="arrivingSummary roboLight floatRight borderLft">
+            <div class="name small marginBtmSml orgFont">Arriving Now</div>
+            <div class="summary ">
+                <div class="marginBtm">
+                    <div class="mainTitle midBlock marginLeftSml">
+                        <div class="busNum more">913E</div>
+                        <div class="license smallest">PBX6N6743</div>
+                    </div>
+                    <div class="small midBlock marginLeftSml">Lane 5</div>
+                </div>
+                <div class="">
+                    <div class="mainTitle midBlock marginLeftSml">
+                        <div class="busNum less">969F</div>
+                        <div class="license smallest">PBX6N6743</div>
+                    </div>
+                    <div class="small midBlock marginLeftSml">Lane 6</div>
+                </div>
+            </div>
+        </div>
+        <span class="clear"></span>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+<div class="busLanesMain moreBtm parking">
+    <div class="mainSummary">
+        <div class="heading subNormal " ng-if="!admin">Bus Parking</div>
+
+
+            <div class="content midBlock">
+            <div class="midBlock largeTxt num female">
+                <div class="">{{busLotStatusDetails.busOccupiedCount}}</div><!--<span class="subTitle">A</span>-->
+                <div class="tag">Occupied</div>
+            </div>
+            <div class="topBlock robotoThin largeTxt slash">/</div>
+            <div class="midBlock largeTxt num male">
+                <div class="">{{busLotStatusDetails.busEmptyCount}} </div><!--<span class="subTitle">E</span>-->
+                <div class="tag">Empty</div>
+            </div>
+            <!--<img src="images/male.png" alt="" class="icon midBlock marginLeftSrt">-->
+        </div>
+        <div class="divider"></div>
+        <div class="timeIndicator leftTxt smallest floatLeft">
+            <div class="midBlock"> {{busParkingDate|date:'shortTime'}}</div>
+            <div class="midBlock indicatorDot red marginLeftSrt" ng-if="!busLotStatusDetails.isBusParkingDataRecieved"></div>
+            <div class="midBlock indicatorDot green marginLeftSrt" ng-if="busLotStatusDetails.isBusParkingDataRecieved"></div>
+        </div>
+    </div>
+
+    <div class="parkingLanes">
+
+        <div class="floatRight marginBtm showMapMain marginTopShort">
+            <div class="btn small showMap" ng-click="setMapStatus(true)">Show Map</div>
+        </div>
+        <span class="clear"></span>
+        <div class="parkingLanesCont">
+            <ul>
+                <slick settings="slickConfig" dots="true" slides-to-show=21 slides-to-scroll=15>
+                    <li class="_{{busLotDetails.status}}" ng-repeat="busLotDetails in busLotStatusDetails.busLotStatusData | orderBy:bayid"
+                        ng-if="$index < (18)"
+                        id="{{busLotDetails.bayId}}">
+                        <div class="name">{{busLotDetails.bayId}}</div>
+                        <div class="content">
+                            <div class="icon">
+                                <img src="images/empty.png" class="_0" alt="" >
+                                <img src="images/busParking.png" class="_1" alt="" >
+                                <img src="images/empty_maintain.png" class="_2" alt="" >
+                                <div class="details" ng-if="busLotDetails.bayId==48 || busLotDetails.bayId==49 || busLotDetails.bayId==50 || busLotDetails.bayId==51 ">
+                                    <div class="num ">SBST</div>
+                                    <!--<div class="time ">12:15</div>-->
+                                </div>
+                            </div>
+                            <!--<div class="license" ng-if="busLotDetails.status==1">PBX6N6743</div>-->
+                        </div>
+                    </li>
+                    <span class="clear" ng-if="admin"></span>
+                    <div class="mainSummary" ng-if="admin">
+                        <div class="content midBlock">
+                           <div class="largeTxt">C</div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <li class="_{{busLotDetails.status}}" ng-repeat="busLotDetails in busLotStatusDetails.busLotStatusData | orderBy:bayid"
+                        ng-if="$index > (17) && $index < (33)"
+                        id="{{busLotDetails.bayId}}">
+                        <div class="name">{{busLotDetails.bayId}}</div>
+                        <div class="content">
+                            <div class="icon">
+                                <img src="images/empty.png" class="_0" alt="" >
+                                <img src="images/busParking.png" class="_1" alt="" >
+                                <img src="images/empty_maintain.png" class="_2" alt="" >
+                                <!--<div class="details" ng-if="busLotDetails.status==1">
+                                    <div class="num ">996</div>
+                                    <div class="time ">12:15</div>
+                                </div>-->
+                            </div>
+                            <!--<div class="license" ng-if="busLotDetails.status==1">PBX6N6743</div>-->
+                        </div>
+                    </li>
+                    <span class="clear" ng-if="admin"></span>
+                    <div class="mainSummary" ng-if="admin">
+                        <div class="content midBlock">
+                            <div class="largeTxt">B</div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                    <li class="_{{busLotDetails.status}}" ng-repeat="busLotDetails in busLotStatusDetails.busLotStatusData"
+                        ng-if="$index > (32) && $index < (51)"
+                        id="{{busLotDetails.bayId}}">
+                        <div class="name">{{busLotDetails.bayId}}</div>
+                        <div class="content">
+                            <div class="icon">
+                                <img src="images/empty.png" class="_0" alt="" >
+                                <img src="images/busParking.png" class="_1" alt="" >
+                                <img src="images/empty_maintain.png" class="_2" alt="" >
+
+                            </div>
+                            <!--<div class="license" ng-if="busLotDetails.status==1">PBX6N6743</div>-->
+                        </div>
+                    </li>
+                    <span class="clear" ng-if="admin"></span>
+                    <div class="mainSummary" ng-if="admin">
+                        <div class="content midBlock">
+                            <div class="largeTxt">A</div>
+                        </div>
+                        <div class="divider"></div>
+                    </div>
+                </slick>
+
+            </ul>
+
+
+
+           <!-- <div class="userMsg marginTop" ng-hide="busLotStatusDetails.busParkingRefresherStatus">
+                <div ng-hide="admin">
+                    <div class="txt">Bus parking data not available for this time</div>
+                </div>
+            </div>-->
+           <!-- {{admin}}-->
+            <!--<div class="userMsg marginTop" ng-hide="false">&lt;!&ndash;busLotStatusDetails.busParkingRefresherStatus&ndash;&gt;
+                <div ng-show="admin">
+                    <div class="txt">Bus parking data not available. Please start Bus parking data refresher from settings configuration </div>
+                </div>
+            </div>-->
+            <div class="loader" ng-show="busLotStatusDetails.busLotStatusDetailsFlag">
+                <div class="ballsWaveG ballsWaveG_1"></div>
+                <div class="ballsWaveG ballsWaveG_2"></div>
+                <div class="ballsWaveG ballsWaveG_3"></div>
+                <div class="ballsWaveG ballsWaveG_4"></div>
+                <div class="ballsWaveG ballsWaveG_5"></div>
+                <div class="ballsWaveG ballsWaveG_6"></div>
+                <div class="ballsWaveG ballsWaveG_7"></div>
+                <div class="ballsWaveG ballsWaveG_8"></div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

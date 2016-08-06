@@ -1,0 +1,1559 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: robotoregular;
+    background: #1a1e2b;
+}
+
+#appWrapper{
+    height: 100%;
+    overflow-x: hidden;
+}
+#AppContent{
+    height: 100%;
+}
+
+/*....... App header ........*/
+#appHeader{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 25px 50px;
+    position: relative;
+    z-index: 200;
+}
+#appHeader .leftCont{
+
+}
+#appHeader .logo{
+    /*width: 100px;*/
+}
+#appHeader .logo img.smrt{
+    width: 100px;
+    height: auto;
+}
+#appHeader .logo img.nec{
+    height: auto;
+    margin-left: 30px;
+    width: 65px;
+}
+
+#appHeader .rightCont{
+}
+#appHeader .notificationBtn{
+    margin-right: 50px;
+    background: #ef4b42;
+    color: #ffffff;
+    cursor: pointer;
+}
+#appHeader .notificationBtn .txt,
+#appHeader .notificationBtn .num{
+    padding: 6px 12px;
+}
+#appHeader .notificationBtn .num{
+    border-left: 2px solid #1a1e2b;
+}
+
+
+
+/*...... Login Section ........*/
+.loginMain {
+    /*position: absolute;*/
+    top: 76px;
+    bottom: 0;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.loginMain .logTitle {
+    color: #122536;
+}
+.loginMain .form li {
+    margin-bottom: 20px;
+}
+
+.loginMain .form li input[type="text"] ,
+.loginMain .form li input[type="password"] {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 2px solid #bbbbbb;
+    color: #717c99;
+}
+
+.loginMain .loginSec {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.loginMain .loginSec .loginBtn {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+    background: #ef4b42;
+    cursor: pointer;
+    display: block;
+    border-bottom: none;
+    margin-top: 20px;
+    position: relative;
+
+    -webkit-transition: all ease-in 200ms;
+    -moz-transition: all ease-in 200ms;
+    -ms-transition: all ease-in 200ms;
+    -o-transition: all ease-in 200ms;
+    transition: all ease-in 200ms;
+}
+.loginMain .loginSec .loginBtn .loaderBar{
+    background: #ef4b42;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.loginMain .loginSec .loginBtn .loaderBar #circularG {
+    margin-top: 7px;
+}
+.loginMain .signUp {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.loginMain .userData {
+    text-align: left;
+    margin-top: 5px;
+}
+
+.loginMain .signUp a {
+    /*color:#122536;*/
+    color: #36b5f1;
+}
+
+
+/*........ content wrapper .......*/
+#contWrapper{
+    min-height: 100%;
+    position: relative;
+
+}
+
+
+
+#contWrapper .sideNavMain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 90px;
+    background: #06070b;
+    box-shadow: -3px 0 3px #06070b inset;
+}
+
+#contWrapper .sideNav {
+    text-align: center;
+    width: 100%;
+    /*background: #686868;*/
+}
+
+#contWrapper .sideNav li {
+    position: relative;
+    margin-top: 10px;
+}
+
+
+#contWrapper .sideNav li.active {
+
+}
+
+#contWrapper .sideNav li a {
+    color: #77a2c7;
+    padding: 12px 0;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+#contWrapper .sideNav li.active a {
+    color: #ef4b42;
+}
+
+#contWrapper .sideNav li .icon {
+    display: inline-block;
+    height: auto;
+    width: 26px;
+    margin-bottom: -4px;
+}
+
+#contWrapper .sideNav li .icon.active {
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*margin-left: -13px;*/
+    /*top: 20px;*/
+    display: none;
+}
+
+#contWrapper .sideNav li .name {
+    margin-top: 3px;
+}
+
+#contWrapper .sideNav li.active .icon.active {
+    display: inline-block;
+}
+
+#contWrapper .sideNav li.active .icon.inactive {
+    display: none;
+}
+
+
+
+/*........ Notification .........*/
+.notifications {
+    background: #06070b;
+    bottom: 0;
+    box-shadow: 2px -3px 3px rgba(0, 0, 0, 0.2) inset;
+    box-sizing: border-box;
+    /*display: none;*/
+    font-family: robotoregular;
+    overflow: auto;
+    padding: 25px 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 320px;
+    z-index: 100;
+    display: none;
+}
+
+.notifications .searchBox {
+    border: none;
+}
+.notifications .searchBox input {
+    background: #4f5975;
+    color: #ffffff;
+}
+.notifications .searchBox .searchBtn {
+    background-color: #4894cf;
+}
+
+
+.notifications .notificationList {
+
+}
+
+.notifications .notificationList li {
+    padding: 18px 5px;
+    border-bottom: 1px solid #505b79;
+    cursor: pointer;
+}
+.notifications .notificationList li.notified {
+    background: rgba(79, 89, 117, 0.5);
+}
+
+.notifications .notificationList li .symbol {
+    width: 40px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+.notifications .notificationList li .symbol img{
+    width: 100%;
+    display: block;
+    height: auto;
+}
+.notifications .notificationList li .notificationTxt {
+    width: 205px;
+    display: inline-block;
+    vertical-align: top;
+}
+.notifications .notificationList li .actionBtn {
+    padding-top: 15px;
+    display: none;
+}
+.notifications .notificationList li .actionBtn .btn{
+    width: 70px;
+    padding: 4px 0;
+    text-align: center;
+    background: #fcdbd9;
+    color: #ef4b42;
+    border-radius: 7px;
+    font-size: 13px;
+}
+.notifications .notificationList li .actionBtn .btn.notify{
+    margin-right: 10px;
+    color: #ffffff;
+    background: #4894cf;
+}
+
+/*........ pageCont ............*/
+#pageCont{
+    /*margin-left: 90px;*/
+    /*margin-right: 320px;*/
+    position: relative;
+}
+#pageCont.admin{
+    margin-left: 90px;
+}
+#pageCont .contentBox.notify{
+    margin-right: 320px;
+}
+#pageCont .analytics .topSlider{
+    padding: 0 30px;
+    background: #3c445b;
+}
+#pageCont .analytics .filterTabs{
+    /*padding: 0 30px;*/
+}
+#pageCont .analytics .analyticsCont{
+    padding: 30px;
+}
+
+.subHeader{
+    text-align: left;
+}
+.subHeader .dataOpt .opt{
+    padding: 4px 20px;
+    color: #717c99;
+    cursor: pointer;
+}
+.subHeader .dataOpt .opt.active{
+    background: #ef4b42;
+    color: #ffffff;
+}
+.subHeader .dropDown.now .head{
+    border-left: 1px solid #ef4b42;
+}
+
+.mainSummary{
+    min-height: 65px;
+    position: relative;
+    text-align: center;
+}
+.mainSummary .heading{
+    text-align: left;
+}
+.mainSummary .content{
+    color: #c3c3c3;
+    background: #1a1e2b;
+    position: relative;
+    z-index: 10;
+    /*padding: 0 25px;*/
+    width: 230px;
+}
+.mainSummary .content .icon{
+    width: 30px;
+    height: auto;
+}
+.mainSummary .content .largeTxt{
+    line-height: 30px;
+}
+.mainSummary .content .tag{
+    line-height: 18px;
+    font-family: robotolight;
+    font-size: 14px;
+}
+.mainSummary .content .num span{
+    margin-left: -7px;
+}
+.mainSummary .content .slash{
+    color: #505b79;
+}
+.mainSummary .content .num.female{
+    color: #2199cb;
+}
+.mainSummary .content .num.male{
+    color: #b6485a;
+}
+.mainSummary .divider{
+    height: 1px;
+    width: 100%;
+    background: #505b79;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: 5px;
+}
+.mainSummary .timeIndicator{
+    bottom: 0;
+    position: absolute;
+}
+.scheduleSection .divider{
+     /*height: 1px;*/
+     /*width: 100%;*/
+     /*background: #505b79;*/
+     /*position: relative;*/
+     /*top: 50%;*/
+     /*left: 0;*/
+     /*margin-top: 5px;*/
+ }
+/*......... Unloading Lanes .......*/
+@keyframes passUnload{
+    0%   {
+        margin-left: 30px;
+        bottom: 0;
+    }
+    50%   {
+        margin-left: 30px;
+        bottom: -20px;
+    }
+    100%   {
+
+        /*margin-left: 30px;*/
+        /*bottom: 20px;*/
+    }
+
+    /*}*/
+
+    /*0% {*/
+        /*transform:  translate(0px,0px)  rotate(0deg) ;*/
+    /*}*/
+    /*100% {*/
+        /*transform:  translate(200px,0px)  rotate(180deg) ;*/
+    /*}*/
+
+    /*from {*/
+        /*transform: translateX(0px);*/
+    /*}*/
+    /*to   {*/
+
+        /*transform: translateX(50px);*/
+    /*}*/
+    /*from {*/
+        /*transform: translateY(0px);*/
+    /*}*/
+    /*to   {*/
+
+        /*transform: translateY(50px);*/
+    /*}*/
+
+    /*60%   {*/
+        /*bottom: -20px;*/
+    /*}*/
+    /*100% {*/
+        /*left: 30%;*/
+    /*}*/
+}
+
+
+.busLanesMain .unloadingLanes{
+
+}
+.unloadingLanes ul li{
+    float: left;
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: 12.5%;
+    min-width: 150px;
+}
+.unloadingLanes ul li:last-of-type{
+    /*float: right;*/
+}
+.unloadingLanes ul li .busNum{
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    text-align: right;
+}
+.unloadingLanes ul li .busIcon{
+    display: inline-block;
+    position: relative;
+}
+.unloadingLanes ul li .busIcon img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.unloadingLanes ul li .busIcon .busNum{
+    position: absolute;
+    line-height: 18px;
+    font-size: 16px;
+    top: 50%;
+    margin-top: -9px;
+    width: 100%;
+    text-align: center;
+}
+.unloadingLanes ul li .busIcon .passIcon{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: none;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    animation-name: passUnload;
+    animation-duration: 2s;
+    /*animation-iteration-count: infinite;*/
+}
+
+.unloadingLanes ul li .busIcon .passIcon .dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+
+/*............. Parking lanes ........*/
+.busLanesMain .unloadingLanes{
+
+}
+.parkingLanes .parkingLanesCont{
+    /*height: 175px;*/
+    position: relative;
+    min-height: 100px;
+    /*overflow: hidden;*/
+    text-align: center;
+}
+.parkingLanes ul{
+    /*padding: 0 20px 0 5px;*/
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.parkingLanes ul li{
+    box-sizing: border-box;
+    /*float: left;*/
+    /*height: 175px;*/
+    transform: rotateZ(-14deg);
+    width: 61px;
+    outline: none;
+    /*float: left;*/
+    display: inline-block;
+}
+.parkingLanes ul li .content{
+    border-right: 1px solid #505b79;
+    padding: 3px 5px 10px;
+}
+.parkingLanes ul li .name{
+    font-size: 12px;
+    margin-bottom: 12px;
+    padding: 0 10px;
+    text-align: right;
+    transform: rotateZ(14deg);
+}
+.parkingLanes ul li .content .icon{
+    position: relative;
+}
+.parkingLanes ul li .content .icon img{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.parkingLanes ul li._0 .content .icon img._0{
+    display: block;
+}
+.parkingLanes ul li._1 .content .icon img._1{
+    display: block;
+}
+.parkingLanes ul li._2 .content .icon img._2{
+    display: block;
+}
+.parkingLanes ul li .content .icon .empty{
+    background: url("../images/emptyLane.png") no-repeat #252c40;
+    background-position: top;
+    background-size: contain;
+    height: 117px;
+    margin: 0 auto;
+    width: 92%;
+    margin-top: 5px;
+}
+.parkingLanes ul li .content .icon .details{
+    box-sizing: border-box;
+    padding: 0 15px;
+    position: absolute;
+    text-align: right;
+    top: 30px;
+    transform: rotateZ(14deg);
+    width: 100%;
+}
+.parkingLanes ul li .content .icon .details .num{
+    font-size: 12px;
+}
+.parkingLanes ul li .content .icon .details .time{
+    font-size: 10px;
+}
+.parkingLanes ul li .content .license{
+    font-size: 9px;
+    margin-top: 12px;
+    transform: rotateZ(14deg);
+}
+
+.parkingLanes .parkingNav{
+    text-align: center;
+    margin-top: 15px;
+}
+.parkingLanes .parkingNav li{
+    float: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 15px;
+    background: #46516e;
+    display: inline-block;
+    cursor: pointer;
+    transform: rotateZ(0deg);
+    margin-right: 20px;
+}
+.parkingLanes .parkingNav li.slick-active{
+    background: #ef4b42;
+}
+.parkingLanes .parkingNav .dot:last-child{
+    margin-right: 0;
+}
+.parkingLanes .mainSummary{
+    margin-bottom: 30px;
+}
+.parkingLanes .mainSummary .content{
+    width: 120px;
+}
+
+/*.......... displayTime ........*/
+.displayTime{
+    font-size: 15px;
+    padding: 5px 0;
+}
+.displayTime .currentDate{
+    /*padding: 0 5px;*/
+    /*background: #ef4b42;*/
+    line-height: 34px;
+}
+.displayTime .currentTime{
+    padding: 0 10px;
+    background: #ef4b42;
+    line-height: 30px;
+}
+
+/*......  Loading Lanes ......*/
+
+
+
+@keyframes numUpdated{
+    0%   {
+        transform: scale(0);
+    }
+    100%   {
+        transform: scale(1.12);
+    }
+}
+.busLanesCont.loadingLanes{
+    padding: 20px 80px 0 40px;
+    position: relative;
+}
+.loadingLanes .busLane{
+
+}
+.loadingLanes .busLane ul{
+
+}
+.loadingLanes .busLane ul li{
+    box-sizing: border-box;
+    float: left;
+    font-family: robotolight;
+    transform: rotateZ(-14deg);
+    width: 11.11%;
+}
+.loadingLanes .busLane .berth{
+    font-family: robotoregular;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-align: right;
+    transform: rotateZ(14deg);
+}
+.loadingLanes .busLane .time{
+    font-size: 12px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    text-align: right;
+    transform: rotateZ(14deg);
+}
+.loadingLanes .busLane .content{
+    border-right: 1px solid #505b79;
+    height: 445px;
+    padding: 10px 0 0;
+    position: relative;
+    text-align: right;
+
+}
+.loadingLanes .busLane ul li:nth-of-type(even) .content{
+    /*background: #f7f7f7;*/
+}
+.loadingLanes .busLane .content .busIcon{
+    box-sizing: border-box;
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+}
+.loadingLanes .busLane .content .busIcon img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.loadingLanes .busLane .content .busIcon .busNum{
+    font-size: 12px;
+    left: 0;
+    line-height: 18px;
+    margin-top: -9px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: rotateZ(14deg);
+    width: 100%;
+}
+.loadingLanes .busLane .content .busList{
+
+}
+.loadingLanes .busLane .content .busList .bus{
+    box-sizing: border-box;
+    padding: 17px 20px;
+    margin-right: -1px;
+    border-right: 2px solid red;
+}
+.loadingLanes .busLane .content .busList .bus.red{
+    border-color: #d82e25;
+}
+.loadingLanes .busLane .content .busList .bus.blue{
+    border-color: #224f8f;
+}
+.loadingLanes .busLane .content .busList .bus.green{
+    border-color: #1e8218;
+}
+.loadingLanes .busLane .busList .bus .passengerNums{
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.loadingLanes .busLane .busList .bus .passengerNums .num{
+    border-radius: 50px;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    transform: rotateZ(14deg);
+    width: 50px;
+}
+.loadingLanes .busLane .busList .bus .passengerNums .num.animate:after {
+    border: 1px solid red;
+    border-radius: 50px;
+    box-sizing: border-box;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transform: scale(0);
+
+    animation-name: numUpdated;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.loadingLanes .busLane .busList .bus .passengerNums.less .num{
+    background: #1e591b;
+}
+.loadingLanes .busLane .busList .bus .passengerNums.less .num.animate:after{
+    border-color: #3cb135;
+}
+.loadingLanes .busLane .busList .bus .passengerNums.more .num{
+    background: #7e231b;
+}
+.loadingLanes .busLane .busList .bus .passengerNums.more .num.animate:after{
+    border-color: #c8382b;
+}
+.loadingLanes .busLane .busList .bus .passengerNums.normal .num{
+    background: #75541d;
+}
+.loadingLanes .busLane .busList .bus .passengerNums.normal .num.animate:after{
+    border-color: #d49934;
+}
+.loadingLanes .busLane .busList .bus .busNum{
+    font-family: robotolight;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    padding: 0 20px;
+    transform: rotateZ(14deg);
+    /*color: #9c9c9c;*/
+    /*line-height: 18px;*/
+    /*margin-top: -8px;*/
+}
+.loadingLanes .busLane .elders{
+    color: #9c3344;
+    font-family: robotoregular;
+    margin-top: 15px;
+    padding: 0 20px;
+    position: relative;
+    transform: rotateZ(14deg);
+}
+.loadingLanes .busLane .elders .tag{
+    border-radius: 20px;
+    color: #fff;
+    line-height: 25px;
+    position: absolute;
+    right: 55px;
+    text-align: center;
+    top: 2px;
+    width: 15px;
+    z-index: 10;
+}
+.loadingLanes .busLane .elders .tag img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.loadingLanes .busLane .elders .num{
+    background: #c22400;
+    border-radius: 50px;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    width: 40px;
+    cursor: pointer;
+}
+.loadingLanes .busLane .elders .num.animate:after {
+    border: 1px solid #f42d00;
+    border-radius: 50px;
+    box-sizing: border-box;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform: scale(0);
+
+    animation-name: numUpdated;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+.loadingLanes .busLane .elders .num .associatedImg{
+    background: #505b7a none repeat scroll 0 0;
+    bottom: 123%;
+    box-sizing: border-box;
+    padding: 3px;
+    position: absolute;
+    right: 0;
+    width: 180px;
+    display: none;
+}
+.loadingLanes .busLane .elders .num .associatedImg:after{
+    border: 8px solid transparent;
+    border-top-color: #505b7a;
+    bottom: -15px;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 10px;
+    width: 0;
+}
+.loadingLanes .busLane .elders .num .associatedImg img.dataImg{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+.eldersDetails.popup{
+    left: 50%;
+    margin-left: -140px;
+    padding: 15px;
+    top: 130px;
+    width: 250px;
+}
+.eldersDetails.popup .birthName{
+    color: #3c445b;
+    padding-bottom: 10px;
+}
+.eldersDetails.popup .dataImg{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.eldersDetails.popup .x{
+    font-size: 16px;
+    padding: 7px 10px;
+}
+
+/*...... Age graph summary .......*/
+
+.ageBaseSummary{
+    /*margin: 0 30px;*/
+    /*padding: 30px 0 20px 0;*/
+    position: relative;
+    color: #9c9c9c;
+}
+.ageBaseSummary .content{
+    padding-top: 40px;
+}
+.ageBaseSummary .genderSummary{
+    padding-top: 92px;
+}
+.ageBaseSummary .genderSummary .summary{
+    padding: 5px 0;
+    width: 130px;
+}
+.ageBaseSummary .genderSummary .icon{
+    width: 30px;
+    height: auto;
+}
+.ageBaseSummary .arrivingSummary{
+    padding: 75px 0 5px 30px;
+}
+.ageBaseSummary .graphSummaryMain{
+    bottom: 0;
+    left: 160px;
+    position: absolute;
+    right: 190px;
+    top: 52px;
+}
+.ageBaseSummary .graphSummary{
+    bottom: 0;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+}
+/*.ageBaseSummary .graphSummary .icon{*/
+    /*height: auto;*/
+    /*margin-top: -20px;*/
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*width: 30px;*/
+/*}*/
+.ageBaseSummary .graphSummary .graph{
+    height: 180px;
+    position: relative;
+    width: 100%;
+}
+
+
+/*.dataTable.busTable .dataRow:nth-child(even){*/
+    /*background: #f7f7f7;*/
+/*}*/
+.dataTable.busTable .dataRow .rowCont li.license{
+    width: 15%;
+    /*text-align: center;*/
+}
+/*.dataTable.busTable .dataRow .rowCont li.license .licenseIcon{*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*/!*display: inline-block;*!/*/
+    /*max-width: 120px;*/
+/*}*/
+.dataTable.busTable .dataRow .rowCont li.arr{
+    width: 20%;
+    font-family: robotolight;
+}
+.dataTable.busTable .dataRow .rowCont li.passengers{
+    width: 7%;
+    font-family: robotolight;
+}
+.dataTable.busTable .dataRow .rowCont li.passengers .passIcon{
+    width: 15px;
+    height: auto;
+    margin-left: 5px;
+}
+.dataTable.busTable .dataRow .rowCont li.bus{
+    width: 23%;
+    text-align: center;
+    position: relative;
+}
+.dataTable.busTable .dataRow .rowCont li.bus .busIconMain{
+    display: inline-block;
+    position: relative;
+}
+.dataTable.busTable .dataRow .rowCont li.bus .busIconMain .number{
+    color: #ffffff;
+    line-height: 20px;
+    margin-top: -10px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+.dataTable.busTable .dataRow .rowCont li.bus .busIcon{
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 110px;
+}
+.dataTable.busTable .dataRow .rowCont li.lane{
+    width: 7%;
+    font-family: robotolight;
+}
+.dataTable.busTable .dataRow .rowCont li.captain{
+    width: 17%;
+}
+.dataTable.busTable .dataRow .rowCont li.dep{
+    width: 20%;
+    font-family: robotolight;
+}
+.dataTable.busTable .dataRow .rowCont li.route{
+    width: 35%;
+    /*text-align: center;*/
+}
+.dataTable.busTable .dataRow .rowCont li.route .routeCont{
+    width: 250px;
+}
+.dataTable.busTable .dataRow .rowCont li.route .routeIcon{
+    width: 22px;
+    margin: 5px 0;
+    height: auto;
+}
+
+.dataTable.sensorTable .dataRow .rowCont li.camIcon{
+    width: 15%;
+}
+.dataTable.sensorTable .camIcon .camImg{
+    width: 50px;
+}
+.dataTable.sensorTable .camIcon .camImg img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.dataTable.sensorTable .dataRow .rowCont li.bay{
+    width: 32%;
+    font-family: robotolight;
+}
+.dataTable.sensorTable .dataRow .rowCont li.camName{
+    width: 33%;
+    color: #d76b7a;
+}
+.dataTable.sensorTable .dataRow .rowCont li.isOnline{
+    width: 10%;
+    font-family: robotolight;
+}
+.dataTable.sensorTable .isOnline{
+    color: #d03151;
+}
+.dataTable.sensorTable .isOnline.online{
+    color: #1db1a5;
+}
+.dataTable.sensorTable .isOnline.offline{
+    color: #d03151;
+}
+.dataTable.sensorTable .dataRow .rowCont li.onlineStatus{
+    width: 10%;
+    text-align: right;
+}
+.dataTable.sensorTable .onlineStatus .circle{
+    width: 15px;
+    height: 15px;
+    background: #d22e50;
+    border-radius: 20px;
+    display: inline-block;
+}
+.dataTable.sensorTable .onlineStatus .circle.online{
+    background: #04b2a6;
+}
+.dataTable.sensorTable .onlineStatus .circle.offline{
+    background: #d22e50;
+}
+
+
+.analyticsCont .analytDataType{
+    /*max-width: 1300px;*/
+    /*margin: 0 auto;*/
+}
+.statSectionMain{
+
+}
+.statSection{
+
+}
+.statSection .numericStats{
+    padding-bottom: 45px;
+    position: relative;
+}
+.statSection .numericStats .currentPointer{
+    background: #ef4b42;
+    bottom: 0;
+    height: 12px;
+    position: absolute;
+    width: 170px;
+    left: 0;
+}
+.statSection .numStatsBox{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 30px;
+    position: relative;
+}
+.statSection .numStatsBox:last-child{
+    margin-right: 0;
+}
+.statSection .numStatsBox.circleMain{
+    width: 170px;
+    position: relative;
+    cursor: pointer;
+}
+.statSection .numStatsBox .name{
+    text-align: center;
+    margin-top: 10px;
+    color: #838f9d;
+}
+.statSection .circleMain .circle{
+    width: 100%;
+    height: 150px;
+}
+
+.statSection .circleMain .circle .solidGauge{
+    width: 100%;
+    height: 100%;
+}
+.statSection .circleMain .circle .solidGaugeCircle{
+    width: 100%;
+    height: 100%;
+}
+.statSection .graph{
+    position: relative;
+}
+.statSection .graph .flashGraph{
+    max-width: 1300px;
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+}
+.statSection .busCountStatMain{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: 20px;
+}
+.statSection .circleMain.busCountStat{
+    width: 120px;
+}
+.statSection .busCountStat .busCount{
+    font-family: robotolight;
+    font-size: 65px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.statSection .busCountStat .base{
+    width: 80px;
+    height: 8px;
+    background: red;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+.statSection .busCountStat.arrival .base{
+    background: #33b154;
+}
+.statSection .busCountStat.departure .base{
+    background: #e4c341;
+}
+.statSection .busCountStat .name{
+    margin-top: 20px;
+}
+
+
+
+.statSection .graphicalStats{
+
+}
+
+
+.statSection .name{
+    padding-bottom: 12px;
+}
+.statSection .timeGraph{
+}
+.statSection .timeGraph .areaSplineMain{
+    width: 550px;
+    height: 250px;
+}
+.statSection .timeGraph .flashGraph{
+    width: 550px;
+    height: 250px;
+}
+.statSection .timeGraph .graph{
+    margin-top: 32px;
+}
+.statSection .timeGraph .areaSplineMain .areaSpline{
+    width: 100%;
+    height: 100%;
+    /*color: rgba(113, 124, 153, 0.51);*/
+}
+
+
+.statSection .graphicalStats .ageGraph{
+    margin-left: 50px;
+}
+.statSection .ageGraph .columnChartMain{
+    width: 350px;
+    height: 200px;
+}
+.statSection .ageGraph .flashGraph{
+    width: 350px;
+    height: 200px;
+}
+.statSection .ageGraph .columnChartMain .columnChart {
+    width: 100%;
+    height: 100%;
+}
+.statSection .ageGraph .numbers{
+    margin-top: 15px;
+}
+.statSection .ageGraph .numbers .female{
+    margin-left: 40px;
+}
+.statSection .ageGraph .numbers .icon{
+    width: 25px;
+    height: auto;
+}
+.statSection .ageGraph .numbers .num{
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+
+
+.smrtMapMain.popup{
+    background: #1a1e2b;
+    box-sizing: border-box;
+    left: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    /*-webkit-transition: all ease-in 300ms;*/
+    /*-moz-transition: all ease-in 300ms;*/
+    /*-ms-transition: all ease-in 300ms;*/
+    /*-o-transition: all ease-in 300ms;*/
+    /*transition: all ease-in 300ms;*/
+}
+.smrtMapMain .ol-attribution.ol-logo-only{
+    display: none;
+}
+.smrtMapMain .angular-openlayers-map:not(full-screen){
+    height: 100%;
+}
+.smrtMapMain .close{
+    /*color: #d60000;*/
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+.smrtMapMain .mapCont{
+    height: 100%;
+    /*width: 90%;*/
+    /*margin: 0 auto;*/
+}
+.smrtMapMain .mapCont img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.userMsg.popup{
+    visibility: visible;
+    color: #000000;
+}
+
+/*....... Settings......*/
+
+.settingTabsMain{
+    padding: 12px 20px;
+    background: #3c445b;
+}
+.settingTabsMain li{
+    padding: 5px 18px;
+    display: inline-block;
+    border-radius: 5px;
+    font-family: robotolight;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.settingTabsMain li:last-of-type{
+    margin-right: 0;
+}
+.settingTabsMain li a{
+    color: #ffffff;
+}
+.settingTabsMain li.active{
+    background: #ef4b42;
+}
+
+
+.settingTabContent{
+    /*max-width: 800px;*/
+    padding: 30px;
+}
+.settingTabContent{
+
+}
+.settingTabContent .optionsMain{
+    font-family: robotolight;
+    padding: 30px 0;
+    border-bottom: 1px solid #505b79;
+}
+.settingTabContent .optionsMain:first-child{
+    padding-top: 0;
+}
+.settingTabContent .options{
+    /*padding-bottom: 30px;*/
+    /*margin-bottom: 30px;*/
+}
+.settingTabContent .btn{
+    background: #4593d1;
+    display: inline-block;
+    padding: 8px 25px;
+    cursor: pointer;
+}
+.settingTabContent .btn .check{
+    height: auto;
+    margin-right: 11px;
+    width: 17px;
+}
+
+
+/*......... smrtUsers .......*/
+.smrtUsers{
+
+}
+.newUsers.popup{
+    background: #1a1e2b;
+    left: 50%;
+    margin-left: -200px;
+    padding: 30px;
+    position: fixed;
+    top: 77px;
+    width: 400px;
+}
+.DeleteUserAccount.popup,
+.clearDep.popup,
+.clearArr.popup{
+    background: #1a1e2b;
+    left: 50%;
+    margin-left: -175px;
+    padding: 30px;
+    position: fixed;
+    top: 200px;
+    width: 350px;
+}
+.DeleteUserAccount.popup .txt,
+.clearDep.popup .txt,
+.clearArr.popup .txt{
+    margin-bottom: 40px;
+}
+
+
+
+.usersTable{
+
+}
+.dataTable.usersTable .dataRow.header {
+    background: #0b0b1a;
+    /*border-bottom: none;*/
+    height: auto;
+}
+.dataTable.usersTable .dataRow.header .rowCont{
+    height: auto;
+}
+.dataTable.usersTable .dataRow {
+    /*border-bottom: none;*/
+    font-family: robotolight;
+    overflow: hidden;
+    height: 60px;
+}
+.dataTable.usersTable .dataRow .rowContMain{
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+    transition: all 250ms ease;
+}
+.dataTable.usersTable .dataRow .rowCont{
+    padding: 15px 30px;
+    height: 60px;
+}
+.dataTable.usersTable .dataRow .rowCont li.name {
+    width: 20%;
+}
+.dataTable.usersTable .dataRow .rowCont li.id {
+    width: 25%;
+}
+.dataTable.usersTable .dataRow .rowCont input{
+    display: block;
+    padding: 4px 12px;
+    width: 150px;
+    font-size: 13px;
+    background: #3c445b;
+    color: #ffffff;
+}
+.dataTable.usersTable .dataRow .rowCont li.btns {
+    width: 50%;
+}
+.dataTable.usersTable .dataRow .rowCont li.btns .btn{
+    width: 50px;
+    text-align: center;
+}
+.dataTable.usersTable .dataRow .rowCont li.edit {
+    width: 10%;
+}
+.dataTable.usersTable .dataRow .rowCont li.edit .editBtn{
+    width: 25px;
+    cursor: pointer;
+}
+.dataTable.usersTable .dataRow .rowCont li.edit .editBtn img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.dataTable.usersTable .dataRow .rowCont li.delete {
+    width: 10%;
+}
+.dataTable.usersTable .dataRow .rowCont li.delete .deleteBtn{
+    width: 22px;
+    cursor: pointer;
+}
+.dataTable.usersTable .dataRow .rowCont li.delete .deleteBtn img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/*....... All on one screen ..........*/
+
+#pageCont .analyticsCont .topColumns{
+
+}
+#pageCont .analyticsCont .topColumns .leftSection{
+    width: 60%;
+    box-sizing: border-box;
+    padding-right: 20px;
+    float: left;
+}
+#pageCont .analyticsCont .topColumns .leftSection .busLanesMain {
+    margin-bottom: 20px;
+}
+#pageCont .analyticsCont .topColumns .leftSection .loadingLanes .busLane .content {
+    height: 305px;
+}
+#pageCont .analyticsCont .topColumns .leftSection .unloadingLanes ul li {
+    padding: 0 10px;
+    width: 14%;
+    min-width: 50px;
+}
+#pageCont .topColumns .leftSection .loadingLanes .num {
+    font-size: 15px;
+    line-height: 40px;
+    width: 40px;
+}
+#pageCont .topColumns .leftSection .loadingLanes .busLane .content .busIcon {
+    margin-bottom: 9px;
+    padding: 0 8px;
+}
+#pageCont .topColumns .leftSection .loadingLanes .busLane .busList .bus .passengerNums {
+    margin-bottom: 0;
+}
+#pageCont .topColumns .leftSection .loadingLanes .busList .bus {
+    padding: 8px;
+}
+#pageCont .topColumns .leftSection .loadingLanes .bus .busNum {
+    font-size: 11px;
+}
+#pageCont .topColumns .leftSection .loadingLanes .busLane .elders {
+    text-align: center;
+    padding: 0 8px;
+    margin-top: 5px;
+}
+#pageCont .topColumns .leftSection .loadingLanes .busLane .elders .num{
+    line-height: 35px;
+    width: 35px;
+}
+#pageCont .topColumns .leftSection .subHeader .dataOpt .opt {
+    font-size: 14px;
+}
+
+
+#pageCont .analyticsCont .topColumns .rightSection{
+    width: 40%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    float: right;
+}
+#pageCont .analyticsCont .topColumns .rightSection .parkingLanes ul li {
+    max-width: 70px;
+    width: 5.5%;
+}
+#pageCont .analyticsCont .topColumns .rightSection .parkingLanes ul li .content .icon .details {
+    line-height: 16px;
+    margin-top: -13px;
+    padding: 0;
+    top: 50%;
+}
+.analyticsCont .scheduleSection{
+
+}
+.analyticsCont .scheduleSection .busFilterMain{
+    margin-bottom: 0;
+}
+.analyticsCont .scheduleSection .scheduleCont{
+    width: 50%;
+    box-sizing: border-box;
+}
+.analyticsCont .scheduleSection .scheduleCont.left{
+    padding-right: 20px;
+}
+.analyticsCont .scheduleSection .scheduleCont.right{
+    padding-left: 20px;
+}
+.analyticsCont .scheduleSection .dataTable.busTable .dataRow .rowCont li.license {
+    width: 25%;
+}
+.analyticsCont .scheduleSection .dataTable.busTable .dataRow .rowCont li.arr ,
+.analyticsCont .scheduleSection .dataTable.busTable .dataRow .rowCont li.dep {
+    width: 30%;
+}
+.analyticsCont .scheduleSection .dataTable.busTable .dataRow .rowCont li.bus {
+    width: 22%;
+}
+.analyticsCont .scheduleSection .dataTable.busTable .dataRow .rowCont li.captain {
+    width: 23%;
+}
+
+.analytics .fullScreen{
+    border-radius: 50px;
+    height: 40px;
+    position: fixed;
+    right: 20px;
+    top: 138px;
+    width: 40px;
+    z-index: 200;
+    background: url("../images/expand.png") no-repeat center rgba(60, 68, 91, 0.6);
+    background-size: 17px;
+}
+.analytics .fullScreen.collapse{
+    background: url("../images/collaps.png") no-repeat center rgba(60, 68, 91, 0.6);
+    background-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+{
+  "id": "pulse-smrt-woodlands-dashboard",
+  "name": "Dashboard for SMRT Woodlands interchange",
+  "version": "@GIT_REVISION@",
+  "description": "Dashboard for SMRT Woodlands interchange",
+  "url": "http://www.nec-labs.com/research-departments/integrated-systems/integrated-systems-home",
+  "configuration": {
+    "port": {
+      "description": "Port number where the control panel will bind.",
+      "type": "int",
+      "default": 5000
+    },
+    "mongodbUrl": {
+      "description": "Url of the MongoDB to use.",
+      "type": "string",
+      "default": "mongodb://127.0.0.1:27017/pulse-smrt-woodlands-dashboard"
+    },
+    "queueLevelDetectorPort": {
+      "description": "Port where to receive the output of the queue level detector application.",
+      "type": "int",
+      "default": 5001
+    },
+    "numberPlateRecognitionPort": {
+      "description": "Port where to receive the output of the automotive number plate recognition application.",
+      "type": "int",
+      "default": 5002
+    },
+    "parkingSensorsPort": {
+      "description": "Port where to receive the output of the parking sensors application.",
+      "type": "int",
+      "default": 5003
+    }
+  }
+}
