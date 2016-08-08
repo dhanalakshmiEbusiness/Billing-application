@@ -1,5 +1,5 @@
 <ul class="settingTabsMain small" ng-controller="adminAuthenticationCtrl">
-    <li ng-class="{active: currentRout('settingsTabs/simulator')}" ng-show="simulator" ng-if="adminAuthenticationCtrlDetails.userDetails.isAdmin">
+    <li ng-class="{active: currentRout('settingsTabs/simulator')}"  ><!--ng-show="simulator" ng-if="adminAuthenticationCtrlDetails.userDetails.isAdmin"-->
         <a href="#/app/settings/settingsTabs/simulator">Simulator</a>
     </li>
     <li ng-class="{active: currentRout('settingsTabs/config')}">
@@ -8,9 +8,9 @@
     <li ng-class="{active: currentRout('settingsTabs/users')}" ng-if="adminAuthenticationCtrlDetails.userDetails.isAdmin">
         <a href="#/app/settings/settingsTabs/users">User Management</a>
     </li>
-    <li ng-class="{active: currentRout('settingsTabs/data')}">
+  <!--  <li ng-class="{active: currentRout('settingsTabs/data')}">
         <a href="#/app/settings/settingsTabs/data">Data</a>
-    </li>
+    </li>-->
 </ul>
 
 <div class="settingsContent" ui-view></div>
