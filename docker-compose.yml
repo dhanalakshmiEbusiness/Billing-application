@@ -1,7 +1,7 @@
 version: '2'
 services:
-  web:TFMWeb
-    container_name:
+  web:
+    container_name: TFMWeb
     environment:
       - DB_HOST_NAME=TFMWebMongoDB
       - DB_PORT=27017
