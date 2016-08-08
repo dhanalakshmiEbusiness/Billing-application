@@ -47,7 +47,7 @@ function busEntryExitDataPusher(){
                         console.log(err)
                 }
                 if(result){
-                        /*saveDataToDb.save.busEntryExistInfoDataHandler.saveData(result);*/
+                        saveDataToDb.save.busEntryExitInfoDataHandler.saveData(result);
                 }else{
                         console.log("No Data In Database (BEE)");
                 }
