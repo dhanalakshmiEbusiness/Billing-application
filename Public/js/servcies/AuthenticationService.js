@@ -40,6 +40,6 @@ taxiFleetManager.factory('authInterceptor', function ($rootScope,$window,$q) {
 
 
 
-smrt.config(function ($httpProvider) {
+taxiFleetManager.config(function ($httpProvider) {
   $httpProvider.interceptors.push('authInterceptor');
 });
