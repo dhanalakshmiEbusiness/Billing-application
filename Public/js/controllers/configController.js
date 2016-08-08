@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/25/2016.
  */
-smrt.controller("configController", function ($scope,configService,authInterceptor) {
+taxiFleetManager.controller("configController", function ($scope,configService,authInterceptor) {
         //$( "#slider" ).slider();
 
         $scope.configDetails = {

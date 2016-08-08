@@ -1,5 +1,5 @@
 
-smrt.controller("mainController", function ($scope,$location,$interval) {
+taxiFleetManager.controller("mainController", function ($scope,$location,$interval) {
 
     $scope.currentRout= function (path) {
         var loc=$location.path();

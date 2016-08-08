@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/9/2016.
  */
-smrt.factory("unloadingBayService",function($http,$rootScope){
+taxiFleetManager.factory("unloadingBayService",function($http,$rootScope){
         var unloadingBayStatus = [];/*
         socket.on('unloadingBayData',function(data){
                 console.log(data)

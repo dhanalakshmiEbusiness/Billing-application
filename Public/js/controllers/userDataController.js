@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/15/2016.
  */
-smrt.controller('UserDataCtrl',function($scope,userDataService){
+taxiFleetManager.controller('UserDataCtrl',function($scope,userDataService){
         $scope.userDataDetails={
                 downloadDataDetails:{
                         selectedDataType:"busLot",

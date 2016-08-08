@@ -1,7 +1,7 @@
 /**
  * Created by zendynamix on 31-10-2015.
  */
-smrt.factory('authInterceptor', function ($rootScope,$window,$q) {
+taxiFleetManager.factory('authInterceptor', function ($rootScope,$window,$q) {
   var isLoggedIn=false;
   var isAdmin=false;
   var getIsLoggedInStatus = function(){

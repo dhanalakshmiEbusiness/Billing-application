@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/13/2016.
  */
-smrt.controller("loadingOccupancyCtrl", function ($scope,authInterceptor,$rootScope,
+taxiFleetManager.controller("loadingOccupancyCtrl", function ($scope,authInterceptor,$rootScope,
   loadingOccupancyInfoService,notificationService,configService,$location){
         $scope.currentRout= function (path) {
                 var loc=$location.path();

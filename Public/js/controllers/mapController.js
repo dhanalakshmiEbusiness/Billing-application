@@ -1,7 +1,7 @@
 /**
  * Created by zendynamix on 08-03-2016.
  */
-smrt.controller("mapController", function ($scope,$location,mapService,busLotService,authInterceptor,$rootScope) {
+taxiFleetManager.controller("mapController", function ($scope,$location,mapService,busLotService,authInterceptor,$rootScope) {
     var geoJsonArray = [];
     $scope.layers = [{
         source: {

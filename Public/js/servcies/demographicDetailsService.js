@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/15/2016.
  */
-smrt.factory("demographicDetailService",function($http,$rootScope){
+taxiFleetManager.factory("demographicDetailService",function($http,$rootScope){
         var demographicRelatedData = {
                 selectedSeconds:30,
                 ageGraphData:[]

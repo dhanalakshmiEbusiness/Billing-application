@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/17/2016.
  */
-smrt.controller("busLotCtrl", function ($scope, authInterceptor,configService,busLotService,$rootScope,mapService) {
+taxiFleetManager.controller("busLotCtrl", function ($scope, authInterceptor,configService,busLotService,$rootScope,mapService) {
     var busLotParkingTimerId;
 
     $scope.busLotStatusDetails = {

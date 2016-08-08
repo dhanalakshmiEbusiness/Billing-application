@@ -2,7 +2,7 @@
  * Created by MohammedSaleem on 10/03/16.
  */
 
-smrt.controller("simulatorCtrl", function ($scope,settingsService) {
+taxiFleetManager.controller("simulatorCtrl", function ($scope,settingsService) {
 
     $scope.settIngSCtatus={
         elderlyQueueSimulatorStatus:false,

@@ -3,10 +3,10 @@
  */
 
 var dependencies = ['ui.router','slickCarousel','flashSliderUI','flashGraphUI','flashCircularGraphUI','openlayers-directive','simpleJQSlider'];
-var smrt = angular.module("smrt", dependencies);
+var taxiFleetManager = angular.module("taxiFleetManager", dependencies);
 
 
-smrt.config(function ($stateProvider, $urlRouterProvider) {
+taxiFleetManager.config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider.
         state('admin', {
             url: "/admin",
@@ -130,7 +130,7 @@ smrt.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/admin");
 });
 
-smrt.run(function($rootScope,authInterceptor,settingsService) {
+taxiFleetManager.run(function($rootScope,authInterceptor,settingsService) {
     $rootScope.admin = authInterceptor.getIsLoggedInStatus();
     function getAdminFlag(){
         $rootScope.admin = authInterceptor.getIsLoggedInStatus();
@@ -151,7 +151,7 @@ smrt.run(function($rootScope,authInterceptor,settingsService) {
 });
 
 
-smrt.directive('repeatDone', function() {
+taxiFleetManager.directive('repeatDone', function() {
     return function(scope, element, attrs) {
         if (scope.$last) { // all are rendered
             scope.$eval(attrs.repeatDone);

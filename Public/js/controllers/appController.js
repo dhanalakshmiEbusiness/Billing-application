@@ -2,7 +2,7 @@
  * Created by MohammedSaleem on 17/02/16.
  */
 
-smrt.controller("appController", function ($scope,$state,$rootScope,busLotService) {
+taxiFleetManager.controller("appController", function ($scope,$state,$rootScope,busLotService) {
     $scope.admin=$rootScope.admin;
 
     $scope.notify=false;

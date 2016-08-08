@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/29/2016.
  */
-smrt.controller('notificationCtrl',function($scope,$rootScope,notificationService){
+taxiFleetManager.controller('notificationCtrl',function($scope,$rootScope,notificationService){
         $scope.notificationDetails={
                 notificationArray:[],
                 notificationCount:0,

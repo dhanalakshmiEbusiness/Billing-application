@@ -2,7 +2,7 @@
  * Created by MohammedSaleem on 17/02/16.
  */
 
-smrt.controller("analyticsController", function ($scope,loadingOccupancyInfoService,busEntryExitService,busLotService,settingsService) {
+taxiFleetManager.controller("analyticsController", function ($scope,loadingOccupancyInfoService,busEntryExitService,busLotService,settingsService) {
     $scope.historicalGraphDataValues = {/*$scope.historicalGraphDataValues.bertIndex*/
         parameterLabel:'LOADING BERTH',
         parameterSelected:'busEntryExit',

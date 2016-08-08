@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/22/2016.
  */
-smrt.factory("settingsService",function($http,$window){
+taxiFleetManager.factory("settingsService",function($http,$window){
         var settingDetails;
         var startLoadingOccupancySimulator = function(){
                 $http.get('/smrt/loadingOccupancy/startDataPush');

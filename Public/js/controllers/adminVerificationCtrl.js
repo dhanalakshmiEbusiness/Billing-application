@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/22/2016.
  */
-smrt.controller('adminAuthenticationCtrl',function($scope,authInterceptor){
+taxiFleetManager.controller('adminAuthenticationCtrl',function($scope,authInterceptor){
         $scope.adminAuthenticationCtrlDetails={
                 userDetails:{
                         isAdmin:false

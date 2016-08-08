@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/9/2016.
  */
-smrt.factory("busLotService",function($http,$rootScope,$window,$q){
+taxiFleetManager.factory("busLotService",function($http,$rootScope,$window,$q){
         var parkingData;
         var getBusLotData = function(){
                 return $http.get('/smrt/busLotStatus/getData')
