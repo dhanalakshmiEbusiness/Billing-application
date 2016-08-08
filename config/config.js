@@ -1,5 +1,6 @@
   var path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
+          chalk = require('chalk'),
     env = process.env.NODE_ENV || 'development';
   dbHost=process.env.DB_HOST_NAME,
   dbPort=process.env.DB_PORT,
@@ -122,3 +123,14 @@ var config = {
 };
 
 module.exports = config[env];
+  logConfiguration();
+
+  function logConfiguration(){
+    console.log(chalk.styles.green.open + `\n\n ---------------------Configuration in Use --------------------------`+chalk.styles.green.close );
+    console.log(chalk.styles.blue.open);
+    console.log(config[env])
+    console.log(chalk.styles.blue.close);
+    console.log(chalk.styles.green.open + ` ----------------------------------------------- \n\n\n`+chalk.styles.green.close);
+
+  }
+
