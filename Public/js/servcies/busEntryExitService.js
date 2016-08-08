@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/23/2016.
  */
-smrt.factory("busEntryExitService",function($http){
+taxiFleetManager.factory("busEntryExitService",function($http){
         var getBusEntryExitCount = function(){
                 return $http.get('/smrt/busEntryExitData/count')
         }

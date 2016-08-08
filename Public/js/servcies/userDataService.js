@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/15/2016.
  */
-smrt.factory('userDataService',function($http){
+taxiFleetManager.factory('userDataService',function($http){
         var getDataForDownload = function(data,start,end){
                 var url=''
                 if(data=='busLot'){

@@ -2,7 +2,7 @@
  * Created by MohammedSaleem on 19/02/16.
  */
 
-smrt.directive('onFinishRender', function ($timeout) {
+taxiFleetManager.directive('onFinishRender', function ($timeout) {
     return {
         restrict: 'A',
         link: function (scope, element, attr) {

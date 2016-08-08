@@ -2,7 +2,7 @@
  * Created by Suhas on 12/5/2015.
  */
 
-smrt.controller('loginCtrl', function ($scope,$http,$window,$location,$state,$rootScope,authInterceptor) {
+taxiFleetManager.controller('loginCtrl', function ($scope,$http,$window,$location,$state,$rootScope,authInterceptor) {
   $scope.checkValidation = function (user) {
       if(user&&user.username&&user.password){
           $(".loginBtn .loaderBar").fadeIn(0);

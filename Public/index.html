@@ -17,7 +17,8 @@
     <link rel="stylesheet" href="bower_components/flash-nec-apis/directives/css/flashSlider.css">
 
     <!--....... Angular js .........-->
-    <script src="http://tombatossals.github.io/angular-openlayers-directive/bower_components/openlayers3/build/ol.js"></script>
+    <!--<script src="http://tombatossals.github.io/angular-openlayers-directive/bower_components/openlayers3/build/ol.js"></script>-->
+    <script src="js/lib/ol.js"></script>
     <!-- build:js libaries/minifiedScripts/angular-min.js -->
     <script src="js/lib/jquery-2.1.4.min.js"></script>
     <script src="js/lib/angular.min.js"></script>
@@ -26,10 +27,12 @@
     <script src="js/app.js"></script>
 
     <!--map-->
-    <script src="http://tombatossals.github.io/angular-openlayers-directive/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
-    <script src="http://tombatossals.github.io/angular-openlayers-directive/dist/angular-openlayers-directive.js"></script>
-    <link rel="stylesheet" href="http://tombatossals.github.io/angular-openlayers-directive/dist/angular-openlayers-directive.css" />
-
+    <!-- <script src="http://tombatossals.github.io/angular-openlayers-directive/bower_components/angular-sanitize/angular-sanitize.min.js"></script>-->
+    <!--<script src="http://tombatossals.github.io/angular-openlayers-directive/dist/angular-openlayers-directive.js"></script>-->
+    <!--<link rel="stylesheet" href="http://tombatossals.github.io/angular-openlayers-directive/dist/angular-openlayers-directive.css" />-->
+    <script src="js/lib/angular-sanitize.min.js"></script>
+    <script src="js/lib/angular-openlayers-directive.js"></script>
+    <link rel="stylesheet" href="css/angular-openlayers-directive.css">
     <!--........ Controllers ........-->
     <!-- build:js application/minifiedScripts/controllers/appController.js -->
     <script src="js/controllers/mainControllers.js"></script>
@@ -83,7 +86,7 @@
 </head>
 <body>
 
-<div id="appWrapper" ng-app="smrt" ng-controller="mainController">
+<div id="appWrapper" ng-app="taxiFleetManager" ng-controller="mainController">
     <div id="AppContent" ui-view></div>
 </div>
 

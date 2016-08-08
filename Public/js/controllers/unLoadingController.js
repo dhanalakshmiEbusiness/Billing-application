@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/9/2016.
  */
-smrt.controller("unloadingCtrl", function ($scope,authInterceptor,unloadingBayService,$rootScope,busLotService) {
+taxiFleetManager.controller("unloadingCtrl", function ($scope,authInterceptor,unloadingBayService,$rootScope,busLotService) {
         var unLoadingBayTimerId;
         $scope.unloadingBayDetails = {
                 unloadingBayArray:[],

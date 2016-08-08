@@ -27,7 +27,7 @@ module.exports = function(app, config,io) {
   app.use(bodyParser.json());
 
     //routes to protect the views
-  app.use('/templates/settings/*', function(req, res, next) {
+  app.use('/templates/*', function(req, res, next) {
     if (!req.headers['authorization'] ) {
       console.log(req.headers['Bearer']);
       res.send('Not Authenticated');

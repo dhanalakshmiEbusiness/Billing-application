@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/25/2016.
  */
-smrt.factory("configService",function($http){
+taxiFleetManager.factory("configService",function($http){
         var simulatorStaus = true;
         var getBusParkingRefreshTime = function(){
                 return $http.get('/smrt/busLotStatus/getRefreshTime')

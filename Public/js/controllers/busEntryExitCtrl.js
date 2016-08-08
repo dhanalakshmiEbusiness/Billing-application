@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/23/2016.
  */
-smrt.controller("busEntryExitCtrl", function ($scope,authInterceptor,busEntryExitService,configService,constantService) {
+taxiFleetManager.controller("busEntryExitCtrl", function ($scope,authInterceptor,busEntryExitService,configService,constantService) {
         var busExitTimerId;
         var busEntryTimerId;
         $scope.busEntryExitDetails = {

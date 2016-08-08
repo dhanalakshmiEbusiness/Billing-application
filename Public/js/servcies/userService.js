@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/8/2016.
  */
-smrt.factory("userService", function ($http) {
+taxiFleetManager.factory("userService", function ($http) {
         var createNewUser = function(userData){
                 return $http.post('/signup',userData)
         }

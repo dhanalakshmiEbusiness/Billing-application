@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 2/15/2016.
  */
-smrt.controller("demographicDetailsCtrl", function ($scope,authInterceptor,$rootScope,
+taxiFleetManager.controller("demographicDetailsCtrl", function ($scope,authInterceptor,$rootScope,
                                                     demographicDetailService,$state,configService) {
         $scope.male=0;
         $scope.female=0;

@@ -1,7 +1,7 @@
 /**
  * Created by Suhas on 3/8/2016.
  */
-smrt.controller("userCtrl", function ($scope,$state,authInterceptor,userService,authInterceptor,$window) {
+taxiFleetManager.controller("userCtrl", function ($scope,$state,authInterceptor,userService,authInterceptor,$window) {
 
         $scope.userData = {
                 newUserData:{},

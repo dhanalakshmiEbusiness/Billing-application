@@ -16,7 +16,7 @@ Instructions to run the application
  name: name of the application // eg:'SMRT'
       },
 port: port number where the application is  running,//eg:4000
-db: mongodb url where the application points to//eg:'mongodb://Test:test@ds011268.mongolab.com:11268/smrt'
+db: mongodb url where the application points to//eg:'mongodb://Test:test@ds011268.mongolab.com:11268/taxifleetmanager'
 zmq:{
 sendHost:Ip address of the server,//eg:"51.12.211.11",
 recHost:"*",

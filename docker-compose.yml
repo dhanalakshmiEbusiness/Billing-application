@@ -1,15 +1,15 @@
 version: '2'
 services:
-  web:
-    container_name: SMRTDashboard
+  web:taxifleetmanager
+    container_name:
     environment:
-      - DB_HOST_NAME=SMRTDashboardMongoDB
+      - DB_HOST_NAME=TAXIFLEETMANAGERDashboardMongoDB
       - DB_PORT=27017
-      - BUS_PARKING_GATWAY_URL="http://118.201.198.248:8000/smrt/parkingbaystatus.php"
+#      - BUS_PARKING_GATWAY_URL="http://118.201.198.248:8000/smrt/parkingbaystatus.php"
     depends_on:
     - mongo
     build: .
-    # image: registry.gitlab.com/necdockerimage/smrt
+    image: registry.gitlab.com/taxidockerimage/taxifleetmanager
     ports:
       - "4200:4200"    # web application Port
       - "4202-4209:4202-4209"  # ZMQ ports for incoming data
@@ -20,10 +20,10 @@ services:
     - mongo
   mongo:
     image: mongo
-    container_name: SMRTDashboardMongoDB
+    container_name: TAXIFLEETMANAGERDashboardMongoDB
    # name:ncecp-nongo
     volumes:
-    - ~/data/mongo/SMRTDashboardDb/:/data/db
+    - ~/data/mongo/TAXIFLEETMANAGERDashboardDb/:/data/db
     #- ~/data/mongo/dbconfig:/data/configdb
     ports:
     - "27028:27018"

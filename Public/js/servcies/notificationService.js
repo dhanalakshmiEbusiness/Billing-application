@@ -1,7 +1,7 @@
 /**
  * Created by zendynamix on 2/29/2016.
  */
-smrt.factory('notificationService',function($rootScope,$http){
+taxiFleetManager.factory('notificationService',function($rootScope,$http){
         var elderlyNotifyObj;
         socket.on('elderlyCountNotificationInfo',function(notifyData){
                 notifyElderOccupancy(notifyData);

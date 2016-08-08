@@ -2,7 +2,7 @@
  * Created by MohammedSaleem on 09/03/16.
  */
 
-smrt.controller("dataDownload", function ($scope) {
+taxiFleetManager.controller("dataDownload", function ($scope) {
     var datePicker=$(".datepicker");
 
     datePicker.datepicker({

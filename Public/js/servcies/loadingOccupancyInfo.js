@@ -2,7 +2,7 @@
  * Created by Suhas on 2/13/2016.
  */
 var smrtService= angular.module('smrtService',[])
-smrt.factory("loadingOccupancyInfoService",function($http,$rootScope,$state){
+taxiFleetManager.factory("loadingOccupancyInfoService",function($http,$rootScope,$state){
         var loadingOccupancyDetails;
         var elderlyQueueDetails;
         var elderlyQueueDetailsByAggregation;

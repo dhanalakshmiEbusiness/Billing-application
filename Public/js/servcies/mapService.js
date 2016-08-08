@@ -1,7 +1,7 @@
 /**
  * Created by zendynamix on 08-03-2016.
  */
-smrt.factory('mapService', function ($rootScope,$http) {
+taxiFleetManager.factory('mapService', function ($rootScope,$http) {
     var  polygonArray=[];
     var  polygonLoadingBayArray=[];
     var  mapObjectArray=[];
