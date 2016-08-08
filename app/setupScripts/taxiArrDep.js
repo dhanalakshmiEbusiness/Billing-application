@@ -10,7 +10,7 @@ Schema = mongoose.Schema;
 /*mongoose.connect(config.db);*/
 
 function createBusEntryExitModel(){
-        var num = 100;
+        var num = 10;
         console.log(num)
         var lat = [1.350228, 1.353864, 1.353864];
         var lang = [103.984889, 103.986498, 103.986498];
@@ -28,7 +28,8 @@ function createBusEntryExitModel(){
                 createBusDetectionDataModel.save(function (err, result) {
                         if (err) {
                                 console.log(err)
-                                console.log("data saved for taxi Arr And Dep")
+                        }else{
+                                console.log("data saved for taxi Arr And Dep");
                         }
 
                 })
@@ -36,21 +37,19 @@ function createBusEntryExitModel(){
 
 module.exports={
         run:function(callBack){
-                callBack();
                 busExitEntryModel.count({},function(err,count){
                         if(err){
                                 console.log(err.stack);
+                                callBack();
                         }else{
                                 if(count>0){
-                                        createBusEntryExitModel();
+                                        console.log("Taxi Arr and Dep Sample Data Present");
+                                        callBack();
                                 }else{
-                                        console.log("Taxi Arr and Dep Sample Data Present")
+                                        callBack()
+                                        createBusEntryExitModel();
                                 }
-                                /* busExitEntryModel.remove({}, function (err) {
-                                 console.log("removed busEntryExit Simulator Data generated document");
-                                 createBusEntryExitModel(callBack);
 
-                                 });*/
                         }
                 })
         }
