@@ -2,9 +2,9 @@
     <li ng-class="{active: currentRout('settingsTabs/simulator')}" ng-show="simulator" ng-if="adminAuthenticationCtrlDetails.userDetails.isAdmin">
         <a href="#/app/settings/settingsTabs/simulator">Simulator</a>
     </li>
-    <!--<li ng-class="{active: currentRout('settingsTabs/config')}">
+    <li ng-class="{active: currentRout('settingsTabs/config')}">
         <a href="#/app/settings/settingsTabs/config">Configuration</a>
-    </li>-->
+    </li>
     <li ng-class="{active: currentRout('settingsTabs/users')}" ng-if="adminAuthenticationCtrlDetails.userDetails.isAdmin">
         <a href="#/app/settings/settingsTabs/users">User Management</a>
     </li>

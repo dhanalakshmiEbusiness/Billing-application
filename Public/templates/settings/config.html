@@ -2,7 +2,7 @@
 
 <div class="settingTabContent" ng-controller="configController">
     <!--<div id="slider"></div>-->
-   <!-- <div class="dataRefresh optionsMain">
+  <div class="dataRefresh optionsMain">
         <div class="">
             <label>
                 <div class="checkbox midBlock">
@@ -11,11 +11,11 @@
                            ng-disabled="!configDetails.userDetails.isAdminStatus">
                     <div class="box"></div>
                 </div>
-                <span class="midBlock marginLeftSrt">Bus Parking Data Refresher</span>
+                <span class="midBlock marginLeftSrt">Taxi Parking Data Refresher</span>
             </label>
         </div>
         <div class="options marginTop" ng-if="configDetails.busParkingDetails.busParkingRefresherStatus">
-            <div class="smallest marginBtmSml">Bus Parking Refresh Time</div>
+            <div class="smallest marginBtmSml">Taxi Parking Refresh Time</div>
             <ul class="form">
                 <li class="">
                     <input type="text" class="subNormal midBlock parkingRefresh full" placeholder="Refresh time"
@@ -28,7 +28,7 @@
             </ul>
         </div>
     </div>
-    <div class="loadingBayAggregation optionsMain">
+    <!--<div class="loadingBayAggregation optionsMain">
         &lt;!&ndash;<div class="toggleBtn">&ndash;&gt;
             &lt;!&ndash;<label>&ndash;&gt;
                 &lt;!&ndash;<div class="checkbox midBlock">&ndash;&gt;
@@ -133,7 +133,7 @@
             <!--</ul>-->
         <!--</div>-->
     <!--</div>-->
-    <div class="optionsMain">
+   <!-- <div class="optionsMain">
         <div class="smallest marginBtmSml">Elderly occupancy Threshold</div>
 
         <ul class="form flow ">
@@ -146,7 +146,7 @@
         </ul>
     </div>
     <div class="loadingBayDataCount optionsMain">
-        <!--        <div class="toggleBtn">
+        &lt;!&ndash;        <div class="toggleBtn">
                     <label>
                         <div class="checkbox midBlock">
                             <input type="checkbox" ng-model="configDetails.loadingBayDetails.loadingBayData"
@@ -155,7 +155,7 @@
                         </div>
                         <span class="midBlock marginLeftSrt">Loading Bay Data By Count</span>
                     </label>
-                </div>-->
+                </div>&ndash;&gt;
         <div class="smallest marginBtmSml">Capacity Of lanes To Calculate Count</div>
         <div class="options">
 
@@ -189,7 +189,7 @@
         </div>
     </div>
     <div class="loadingBayDataCount optionsMain">
-        <!--        <div class="toggleBtn">
+        &lt;!&ndash;        <div class="toggleBtn">
                     <label>
                         <div class="checkbox midBlock">
                             <input type="checkbox" ng-model="configDetails.loadingBayDetails.loadingBayData"
@@ -198,8 +198,8 @@
                         </div>
                         <span class="midBlock marginLeftSrt">Loading Bay Data By Count</span>
                     </label>
-                </div>-->
-        <!--<div class="options">
+                </div>&ndash;&gt;
+        &lt;!&ndash;<div class="options">
 
             <ul class="form flow">
                 <li>
@@ -224,12 +224,12 @@
                 </li>
                 <span class="clear"></span>
             </ul>
-        </div>-->
+        </div>&ndash;&gt;
         <div class="saveConfig midBlock btn" ng-click="submitConfigData()">SAVE</div>
-    </div>
+    </div>-->
     <div class="formBtns small roboRegular" ng-if="configDetails.userDetails.isAdminStatus"><!--ng-if="configDetails.busParkingDetails.busParkingRefresherStatus ||
         configDetails.loadingBayDetails.isAggregation"-->
-        <!--<div class="saveConfig midBlock btn" ng-click="submitConfigData()">SAVE</div>-->
+        <div class="saveConfig midBlock btn" ng-click="submitConfigData()">SAVE</div>
     </div>
 </div>
 

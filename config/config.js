@@ -126,7 +126,8 @@ module.exports = config[env];
   logConfiguration();
 
   function logConfiguration(){
-    console.log(chalk.styles.green.open + `\n\n ---------------------Configuration in Use --------------------------`+chalk.styles.green.close );
+    console.log(chalk.styles.green.open+chalk.styles.green.close );
+    console.log("\n\n ---------------------Configuration in Use --------------------------")
     console.log(chalk.styles.blue.open);
     console.log(config[env])
     console.log(chalk.styles.blue.close);
