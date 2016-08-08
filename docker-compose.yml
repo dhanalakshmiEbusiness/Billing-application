@@ -9,7 +9,7 @@ services:
     depends_on:
     - mongo
     build: .
-    image: registry.gitlab.com/necdockerimage/taxifleetmanager
+    image: registry.gitlab.com/taxidockerimage/taxifleetmanager
     ports:
       - "4200:4200"    # web application Port
       - "4202-4209:4202-4209"  # ZMQ ports for incoming data
