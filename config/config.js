@@ -27,6 +27,7 @@ var config = {
         {name:'busEntryExitInfoData',portNo:'4204',type:'pull'},
         {name:'bus_ParkingQueueInfoData',portNo:'4207',type:'pull'}]
     },
+    busParkingDataReceiverApi:"http://118.201.198.248:8000/smrt/parkingbaystatus.php"
   },
 
   integration: {
@@ -48,6 +49,7 @@ var config = {
         {name:'busEntryExitInfoData',portNo:'4204',type:'pull'},
         {name:'bus_ParkingQueueInfoData',portNo:'4207',type:'pull'}]
     },
+          busParkingDataReceiverApi:"http://118.201.198.248:8000/smrt/parkingbaystatus.php"
   },
 
   cpIntegration: {
@@ -68,7 +70,8 @@ var config = {
         {name:'loadingOccupancyInfoData',portNo:'4203',type:'pull'},
         {name:'busEntryExitInfoData',portNo:'4204',type:'pull'},
         {name:'bus_ParkingQueueInfoData',portNo:'4207',type:'pull'}]
-    }
+    },
+    busParkingDataReceiverApi:"http://118.201.198.248:8000/smrt/parkingbaystatus.php"
   },
 
   test: {

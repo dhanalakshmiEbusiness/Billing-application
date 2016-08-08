@@ -11,7 +11,7 @@ var express = require('express'),
         busLotStatusModel = mongoose.model('busLotStatusModel');
 var zlib = require('zlib');
 var aggregationModule = require('../aggregation');
-var busLotDataRetrieverFlag = false;
+var busParkingStatus = false;
 var bCrypt = require('bcrypt-nodejs');
 var jwt    = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var expressJwt = require('express-jwt'); //https://npmjs.org/package/express-jwt
@@ -70,7 +70,7 @@ router.get('/smrt/busLotStatus/getRefreshTime', function (req, res) {
         res.send(refreshTime);
 })
 function triggerBusLotStatusDataPusher(){
-        if(busLotDataRetrieverFlag) {
+        if(busParkingStatus) {
                 busLotStatusId = setInterval(function () {
                         /*console.log("started")*/
                         busLotDataRetriever.getBusLotData();
@@ -83,7 +83,7 @@ function clearIntervalOfBusParkingDetails(){
         clearInterval(busLotStatusId);
 }
 router.get('/smrt/busLotStatus/getData', function (req, res) {
-        if(busLotDataRetrieverFlag){
+        if(busParkingStatus){
                 busLotDataRetriever.getBusLotData();
         }
         res.send("sent for first time");
@@ -163,6 +163,7 @@ function getBusParkingRetrievalDetails(){
 getBusParkingRetrievalDetails();
 
 function setBusParkingRefreshStatus(flag){
+        busParkingStatus = flag;
         settingsModel.findOne({'SettingsConfiguration.id':1}, function (err, settingsObj) {
                 if (err)
                         console.log(err);

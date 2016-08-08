@@ -17,7 +17,7 @@ var options = {
 };
 var getBusLotData = function(){
         var busLotApi = config.busParkingDataReceiverApi;
-        request("http://118.201.198.248:8000/smrt/parkingbaystatus.php", function (error, response, body) {
+        request(busLotApi, function (error, response, body) {
                 try {
                         var data = JSON.parse(body);
                         saveData.save.busLotStatusDataHandler.saveData(data);

@@ -65,9 +65,8 @@ function migrate(){
             {
                 $project: {
                     "_id":1,
-                    "recievedDateArray1":{
-                        $arrayElemAt:["$receivedDateTimeArray",0]},
-                        "busParkingArray":"$busParkingArray"
+                    "recievedDateArray1":{$arrayElemAt:["$receivedDateTimeArray",0]},
+                    "busParkingArray":"$busParkingArray"
                 }
             },
 

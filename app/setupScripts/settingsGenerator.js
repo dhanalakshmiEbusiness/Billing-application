@@ -59,7 +59,7 @@ function generateSettingDocument(callback){
 
 
         settingsModelObj.SettingsConfiguration.busParkingDetails.refreshTime=30*1000;
-        settingsModelObj.SettingsConfiguration.busParkingDetails.refreshStatus=false;
+        settingsModelObj.SettingsConfiguration.busParkingDetails.refreshStatus=true;
 
 
         settingsModelObj.SettingsConfiguration.demographicDetails.isAggregation=true;
