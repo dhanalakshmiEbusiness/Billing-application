@@ -7,7 +7,7 @@ var express = require('express'),
 mongoose.connect(config.db);
 
 var dataSeeder = require("data-seeder");
-var scriptSeeder = dataSeeder.run({scriptDirPath:__dirname+'/app/setupScripts/',mongo:false});
+var scriptSeeder = dataSeeder.run({scriptDirPath:__dirname+'/app/setupScripts/',mongo:true});
   scriptSeeder.then(function(){
       var db = mongoose.connection;
       db.on('error', function (){

@@ -7,9 +7,9 @@ var busExitEntryModel = require('../models/busEntryExistModel');
 /*var anme = __dirname+'../';*/
 /*var constant = require(__dirname+'/../const');*/
 Schema = mongoose.Schema;
-mongoose.connect(config.db);
+/*mongoose.connect(config.db);*/
 
-function createBusEntryExitModel(callBack){
+function createBusEntryExitModel(){
         var num = 100;
         console.log(num)
         var lat = [1.350228, 1.353864, 1.353864];
@@ -28,7 +28,6 @@ function createBusEntryExitModel(callBack){
                 createBusDetectionDataModel.save(function (err, result) {
                         if (err) {
                                 console.log(err)
-                                callBack();
                                 console.log("data saved for taxi Arr And Dep")
                         }
 
@@ -37,13 +36,13 @@ function createBusEntryExitModel(callBack){
 
 module.exports={
         run:function(callBack){
+                callBack();
                 busExitEntryModel.count({},function(err,count){
                         if(err){
                                 console.log(err.stack);
-                                callback();
                         }else{
                                 if(count>0){
-                                        createBusEntryExitModel(callBack);
+                                        createBusEntryExitModel();
                                 }else{
                                         console.log("Taxi Arr and Dep Sample Data Present")
                                 }
