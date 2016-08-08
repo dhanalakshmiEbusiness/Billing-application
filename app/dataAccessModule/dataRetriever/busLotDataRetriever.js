@@ -24,6 +24,7 @@ var getBusLotData = function(){
                 }
                 catch(err){
                         console.error("Error while processing the message :")
+                        console.error(err.stack)
                         if(body){
                                 console.log(err.stack)
                         }
