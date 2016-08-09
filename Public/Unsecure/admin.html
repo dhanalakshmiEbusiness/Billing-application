@@ -12,18 +12,14 @@
 <div id="contWrapper" class="lightBack">
 
     <div>
-        <div class="loginMain lightBack" >
+        <div class="loginMain lightBack" ng-keypress="enterToLogin($event)">
             <div class="loginSec">
                 <div class="logTitle midTitle centerTxt roboRegular">Welcome</div>
-                <div class="marginTop centerTxt roboLight subNormal" style="color: red">
-                    {{error}}
-                    {{message}}
-                </div>
                 <ul class="form marginTop">
                     <li><input type="text" placeholder="Username" class="subNormal" ng-model="user.username"></li>
                     <li><input type="password" placeholder="Password" class="subNormal" ng-model="user.password"></li>
                 </ul>
-                <div ng-click="checkValidation(user)" class="loginBtn subNormal">
+                <div ng-click="checkValidation(user)" class="loginBtn subNormal marginBtmSrt">
                     Login
                     <div class="loaderBar">
                         <div id="circularG">
@@ -38,6 +34,8 @@
                         </div>
                     </div>
                 </div>
+                <div class="small error">{{error}}</div>
+                <div class="small error">{{message}}</div>
 
                 <div class="signUp">
                     <!--<a href="#/signUp" class="small">Create a new account</a>-->
