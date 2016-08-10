@@ -3,7 +3,7 @@ services:
   web:
     container_name: TFMWeb
     environment:
-      - DB_HOST_NAME=TFMWebMongoDB
+      - DB_HOST_NAME=TFMDb
       - DB_PORT=27017
       - BUS_PARKING_GATWAY_URL=http://118.201.198.248:8000/smrt/parkingbaystatus.php
     depends_on:
