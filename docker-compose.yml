@@ -20,7 +20,7 @@ services:
     - mongo
   mongo:
     image: mongo
-    container_name: TFMWebMongoDB
+    container_name: TFMDb
    # name:ncecp-nongo
     volumes:
     - ~/data/mongo/TaxiFleetManagerDashboardMongoDB/:/data/db

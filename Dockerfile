@@ -3,7 +3,7 @@ MAINTAINER Ritesh Ranjan
 
 # Application specific configuration
 
-ENV APP_INSTALL_PATH /smrt
+ENV APP_INSTALL_PATH /tfm
 WORKDIR $APP_INSTALL_PATH
 
 RUN mkdir -p $APP_INSTALL_PATH
