@@ -23,7 +23,7 @@ services:
     container_name: TFMDb
    # name:ncecp-nongo
     volumes:
-    - ~/data/mongo/TaxiFleetManagerDashboardMongoDB/:/data/db
+    - /data-disk/data/mongo/TaxiFleetManagerDashboardMongoDB/:/data/db
     #- ~/data/mongo/dbconfig:/data/configdb
     ports:
     - "27028:27018"
