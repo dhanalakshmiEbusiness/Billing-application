@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-chmod +x nodejs/bin/node
-
-export PATH=$PWD/nodejs/bin
-
-node pulse-smrt-woodlands-dashboard.js check-requirements configuration.json
